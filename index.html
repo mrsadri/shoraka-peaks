@@ -159,18 +159,11 @@ section{scroll-margin-top:96px}
 .col:hover .col-name,.col.act .col-name{color:var(--ink)}
 .col:focus-visible{outline:none}
 .col:focus-visible .bar{box-shadow:0 0 0 2px var(--card),0 0 0 4px var(--ink)}
-/* variant: peaks */
-.chart[data-variant="peaks"] .bar{background:none;border:0;border-radius:0}
-.chart[data-variant="peaks"] .col.lv0 .bar{opacity:1}
-.mtn{position:absolute;bottom:0;left:50%;width:240%;height:100%;transform:translateX(-50%);overflow:visible;pointer-events:none}
-.mtn .snowcap{transform-box:fill-box;transform-origin:50% 0;transition:transform .6s var(--spring)}
-.chart[data-variant="peaks"] .num{margin-top:calc(var(--chartH) * var(--r) * .34)}
-.chart[data-variant="peaks"] .col.lv0 .num{margin-top:6px}
 .chart-foot{display:flex;justify-content:space-between;gap:12px;font-size:13px;line-height:1.65;color:var(--muted)}
 .chart-hint{display:none;margin:0;font-size:12.5px;color:var(--muted);text-align:center}
 
 /* peak card */
-.peakcard{position:fixed;z-index:60;width:256px;padding:16px 18px;border-radius:20px;background:var(--card);border:1px solid var(--line);
+.peakcard{position:fixed;z-index:60;width:292px;padding:16px 18px;border-radius:20px;background:var(--card);border:1px solid var(--line);
   box-shadow:0 16px 34px -16px rgba(56,36,20,.4);pointer-events:none;opacity:0;transform:translateY(6px) scale(.98);
   transition:opacity .25s ease,transform .45s var(--spring);display:flex;flex-direction:column;gap:8px}
 .peakcard.show{opacity:1;transform:none}
@@ -179,6 +172,12 @@ section{scroll-margin-top:96px}
 .peakcard .ht{font-weight:700;font-size:13px;color:#5C4A38;white-space:nowrap}
 .peakcard .rg{margin:0;font-size:13px;line-height:1.65;color:var(--muted)}
 .peakcard hr{border:0;height:1px;background:var(--line);margin:0}
+.peakcard .st{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.peakcard .st[hidden]{display:none}
+.peakcard .st>div{display:flex;flex-direction:column;gap:2px;padding:8px 10px;border-radius:12px;background:var(--paper-2)}
+.peakcard .st .k{font-size:11.5px;line-height:1.5;color:var(--muted)}
+.peakcard .st b{font-weight:800;font-size:14.5px;line-height:1.4;color:var(--ink)}
+.peakcard .st .cap{grid-column:1/-1;margin:0;font-size:11.5px;line-height:1.6;color:var(--muted)}
 .peakcard .ds{margin:0;font-size:14px;line-height:1.65;color:var(--body)}
 
 /* ---------- how ---------- */
@@ -257,13 +256,40 @@ input[type=range]:hover::-webkit-slider-thumb{box-shadow:0 0 0 8px rgba(226,180,
 input[type=range]:active::-webkit-slider-thumb{transform:scale(1.12);box-shadow:0 0 0 10px rgba(226,180,74,.22)}
 input[type=range]:focus-visible{outline:none}
 input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(--night),0 0 0 5px var(--brick)}
-.next{display:flex;flex-direction:column;gap:22px}
-.next h3{margin:0;font-weight:700;font-size:16px;line-height:1.65}
-.next .big{margin:0;font-weight:700;font-size:clamp(20px,2.2vw,24px);line-height:1.5;text-align:center}
-.next .big b{color:var(--brick);font-weight:800}
-.next .sm{display:block;margin-top:4px;font-weight:400;font-size:13.5px;color:var(--night-muted)}
-.next .and{display:block;font-size:13px;font-weight:500;color:var(--night-muted);margin:4px 0}
-.next.top .big{color:var(--brick)}
+.mine{display:flex;flex-direction:column;gap:14px}
+.mine-hd{display:flex;justify-content:space-between;align-items:center;gap:8px 12px;flex-wrap:wrap}
+.mine-hd h3{margin:0;font-weight:700;font-size:16px;line-height:1.65}
+.mine-hd h3 span{color:var(--brick)}
+.mine-lnk{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:13.5px;color:var(--brick);text-decoration:none;border-bottom:1px dashed rgba(226,180,74,.55);transition:border-color .3s}
+.mine-lnk:hover{border-bottom-style:solid}
+.mine-lnk svg{transition:transform .45s var(--spring)}
+.mine-lnk:hover svg{transform:translateY(2px)}
+.mine-st{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mine-st>div{display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px;border-radius:14px;background:rgba(243,238,227,.05);border:1px solid var(--night-3)}
+.mine-st span{font-size:13px;color:var(--night-muted)}
+.mine-st b{font-weight:900;font-size:28px;line-height:1.25;color:var(--night-text);font-variant-numeric:tabular-nums}
+.mine-cap{margin:0;font-size:12.5px;color:var(--night-muted);text-align:center}
+.next{margin-top:24px;display:flex;flex-direction:column;gap:18px}
+.nx-hd{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.nx-eb{padding:2px 12px;border-radius:999px;background:rgba(226,180,74,.16);color:var(--brick);font-weight:700;font-size:12.5px;line-height:1.8}
+.nx-hd h3{margin:0;font-weight:800;font-size:clamp(19px,2vw,22px);line-height:1.5}
+.nx-grid{display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:14px}
+.nx-grid.top{grid-template-columns:1fr 1fr}
+.nx-blk{display:flex;flex-direction:column;gap:10px;padding:18px;border-radius:16px;background:rgba(243,238,227,.04);border:1px solid var(--night-3);transition:border-color .35s ease}
+.nx-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.nx-lb{font-weight:700;font-size:14px;color:var(--night-muted)}
+.nx-ok{font-weight:700;font-size:12.5px;color:var(--brick)}
+.nx-big{margin:0;font-weight:700;font-size:18px;line-height:1.55}
+.nx-big b{color:var(--brick);font-weight:800}
+.nx-sm{display:block;margin-top:2px;font-weight:400;font-size:13px;line-height:1.6;color:var(--night-muted)}
+.meter{height:6px;border-radius:3px;background:var(--night-3);overflow:hidden;margin-top:auto}
+.meter i{display:block;height:100%;width:calc(var(--w,0) * 100%);border-radius:3px;background:var(--brick);transition:width .5s var(--out)}
+.nx-ft{font-size:12.5px;color:var(--night-muted);font-variant-numeric:tabular-nums}
+.req.ok{border-color:rgba(226,180,74,.45)}
+.req.ok .nx-big{color:var(--night-muted)}
+.gain{background:var(--brick);border-color:var(--brick);color:var(--ink)}
+.gain .nx-lb,.gain .nx-sm{color:rgba(41,33,26,.72)}
+.gain .nx-big{font-size:clamp(20px,2.2vw,24px);font-weight:800}
 .fade-swap{transition:opacity .25s ease,transform .45s var(--out)}
 .fade-swap.out{opacity:0;transform:translateY(6px)}
 
@@ -293,19 +319,25 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(-
 .legend2{display:flex;gap:14px;align-items:center;font-size:13px;color:var(--muted);margin-top:16px}
 .legend2 b{color:var(--ink);font-weight:800}
 .rt-scroll{margin-top:24px;overflow-x:auto;border-radius:22px;border:1px solid var(--line);background:var(--card);-webkit-overflow-scrolling:touch}
-.rt{display:grid;grid-template-columns:190px repeat(10,minmax(86px,1fr));min-width:1050px}
-.rt .c{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:12px 4px;border-top:1px solid var(--line);
-  transition:background-color .35s ease}
-.rt .c.lbl{align-items:flex-start;padding-inline:24px;position:sticky;inset-inline-start:0;background:var(--card);z-index:2;font-weight:700;font-size:16px;line-height:1.6}
-.rt .hdr{border:0;border-top:0;background:transparent;font:inherit;color:inherit;padding-block:12px 10px;cursor:pointer}
-.rt .hdr .bx{width:30px;height:30px;border-radius:9px;background:#EFE6D4;display:grid;place-items:center;font-weight:900;font-size:14px;transition:background-color .3s,transform .45s var(--spring)}
-.rt .hdr .nm{font-weight:600;font-size:13px;line-height:1.3;color:var(--muted);margin-top:4px;white-space:nowrap}
-.rt .hdr:hover .bx{transform:translateY(-2px)}
-.rt .lbl.hdr{cursor:default;font-weight:600;font-size:14px;color:var(--muted)}
-.rt .cash{font-weight:800;font-size:17px;line-height:1.4;color:var(--ink)}
-.rt .inst{font-size:13px;line-height:1.4;color:var(--muted)}
-.rt .base{font-weight:700;font-size:15px;color:var(--muted)}
-.rt .c.hl{background:rgba(226,180,74,.22)}
+.ctx{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-top:22px;font-size:15px;line-height:1.6;color:var(--body)}
+.ctx-pk{display:inline-flex;align-items:center;gap:8px;padding:4px 6px 4px 14px;border-radius:999px;background:var(--brick);font-weight:800;color:var(--ink)}
+.ctx-pk .b{width:24px;height:24px;border-radius:12px;background:var(--card);display:grid;place-items:center;font-weight:900;font-size:13px;line-height:1}
+.ctx-lnk{font-weight:700;font-size:13.5px;color:var(--ink-2);text-decoration:none;border-bottom:1px dashed var(--line-2);transition:border-color .3s}
+.ctx-lnk:hover{border-bottom-color:var(--ink-2)}
+.rt{display:grid;grid-template-columns:176px repeat(var(--n,5),minmax(124px,1fr));min-width:calc(176px + var(--n,5) * 124px)}
+.rt .c{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:14px 8px;border-top:1px solid var(--line);transition:background-color .35s ease}
+.rt .c.lbl{align-items:flex-start;padding-inline:22px;position:sticky;inset-inline-start:0;background:var(--card);z-index:2;font-weight:700;font-size:15.5px;line-height:1.6}
+.rt .hdr{border-top:0;padding-block:16px 12px;gap:6px}
+.rt .hdr .tg{min-height:22px;max-width:100%;padding:1px 10px;border-radius:999px;font-weight:600;font-size:12px;line-height:20px;color:var(--muted);text-align:center}
+.rt .hdr .bx{width:30px;height:30px;border-radius:9px;background:#EFE6D4;display:grid;place-items:center;font-weight:900;font-size:14px}
+.rt .hdr .nm{font-weight:700;font-size:14px;line-height:1.3;color:var(--ink-2);white-space:nowrap}
+.rt .lbl.hdr{justify-content:flex-end;font-weight:600;font-size:14px;color:var(--muted)}
+.rt .rate{display:grid;grid-template-columns:40px 48px;align-items:baseline}
+.rt .rate i{font-style:normal;font-size:13px;color:var(--muted)}
+.rt .rate b{font-weight:800;font-size:17px;line-height:1.5;color:var(--ink);font-variant-numeric:tabular-nums;text-align:end}
+.rt .base{font-weight:700;font-size:14.5px;color:var(--muted)}
+.rt .c.hl{background:rgba(226,180,74,.2)}
+.rt .hdr.hl .tg{background:var(--ink);color:var(--card)}
 .rt .hdr.hl .bx{background:var(--brick)}
 .rt .hdr.hl .nm{color:var(--ink)}
 .soon{margin-top:24px;display:flex;align-items:center;gap:24px;padding:36px 32px;border-radius:22px;background:var(--card);border:1px solid var(--line)}
@@ -338,9 +370,19 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(-
 .cta{padding:24px 0 0;position:relative}
 .cta-row{display:flex;align-items:center;justify-content:center;gap:0}
 .niche-wrap{flex:0 0 512px;max-width:512px;padding:0 0 0}
-.arch{position:relative;width:100%;aspect-ratio:512/480;border-radius:min(198px,38vw) min(198px,38vw) 6px 6px;overflow:hidden;background:#EDE3CF;
+.arch{position:relative;width:100%;aspect-ratio:512/480;border-radius:min(198px,38vw) min(198px,38vw) 6px 6px;overflow:hidden;background:radial-gradient(70% 52% at 50% 0%,rgba(255,238,198,.6),rgba(255,238,198,0) 72%),linear-gradient(180deg,#F4E9D6,#EFE2CB 58%,#E9D9BD);
   box-shadow:inset 0 18px 40px -14px rgba(60,40,20,.45),inset 0 0 0 10px #E9DDC6,inset 0 0 0 11px rgba(120,96,64,.18)}
-.arch canvas{position:absolute;inset:11px 11px 0;width:calc(100% - 22px);height:calc(100% - 11px);border-radius:min(188px,36vw) min(188px,36vw) 0 0;display:block}
+.arch .lamp{position:absolute;inset:0;pointer-events:none;background:radial-gradient(56% 44% at 50% 3%,rgba(255,236,184,.95),rgba(255,236,184,.42) 46%,rgba(255,236,184,0) 76%);
+  opacity:0;transform:translateX(calc(var(--lx,0) * 56px));transition:opacity 1.8s ease .2s,transform .9s var(--out)}
+.in .arch .lamp{opacity:1}
+.arch .tree{position:absolute;inset:11px 11px 0;width:calc(100% - 22px);height:calc(100% - 11px);overflow:visible}
+.tree .rib{fill:none;stroke:rgba(150,104,40,.38);stroke-width:.9;stroke-linecap:round}
+.tree .shadow{transform:translate(calc(16px - var(--lx,0) * 30px),9px);transition:transform .9s var(--out)}
+.tree .grow{opacity:0;transform:translateY(18px);transition:opacity 1s ease .1s,transform 1.4s var(--out) .1s}
+.in .tree .grow{opacity:1;transform:none}
+.tree .lf{transform-box:fill-box;transform-origin:0% 50%;transform:scale(0) rotate(-24deg);transition:transform 1s var(--spring);transition-delay:calc(var(--d,0) * 1ms)}
+.in .tree .lf{transform:none}
+.tree .sw{transform-box:fill-box;transform-origin:50% 100%;animation:sway 9s ease-in-out infinite alternate}
 .arch::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
   box-shadow:inset 0 22px 30px -18px rgba(40,28,16,.5),inset 14px 0 24px -18px rgba(40,28,16,.4),inset -14px 0 24px -18px rgba(40,28,16,.4)}
 .sill{height:14px;margin:0 -8px;border-radius:4px;background:linear-gradient(#E9DDC6,#D9CBB0);box-shadow:0 10px 18px -12px rgba(60,40,20,.5)}
@@ -378,21 +420,13 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(-
 .in .rule{transform:none}
 .mark .draw{stroke-width:1.3}
 
-/* ---------- comparison switch ---------- */
-.switch{position:fixed;z-index:70;bottom:16px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;padding:6px 6px 6px 14px;
-  border-radius:999px;background:rgba(251,248,241,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line-2);
-  box-shadow:0 18px 36px -18px rgba(41,33,26,.55);font-size:13px;white-space:nowrap}
-.switch .lb{font-weight:700;color:var(--ink-2);padding-inline-start:8px}
-.seg{position:relative;display:flex;gap:2px;padding:3px;border-radius:999px;background:#EEE6D6}
-.seg button{position:relative;z-index:1;border:0;background:none;padding:7px 14px;border-radius:999px;font-weight:700;font-size:13px;cursor:pointer;transition:color .3s}
-.seg button[aria-pressed="true"]{color:var(--card)}
-.seg .pill{position:absolute;top:3px;bottom:3px;border-radius:999px;background:var(--ink);transition:inset-inline-start .5s var(--spring),width .5s var(--spring)}
-
 /* ---------- responsive ---------- */
 @media (max-width:1180px){
   .hero-card{flex-direction:column;align-items:stretch;gap:40px;padding:40px 32px}
   .hero-chart{flex:none;max-width:none;width:100%}
   .calc-body{grid-template-columns:1fr}
+  .nx-grid,.nx-grid.top{grid-template-columns:1fr 1fr}
+  .nx-grid .gain{grid-column:1/-1}
   .cta-row{flex-direction:column}
   .niche-wrap{order:-1}
   .niche{padding:28px 16px 8px}
@@ -407,6 +441,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(-
   .prow .v,.prow .p{display:flex;flex-direction:column;font-size:15px}
   .prow [data-k]::before{content:attr(data-k);font-weight:500;font-size:12px;color:var(--muted)}
   .cards2{grid-template-columns:1fr}
+  .nx-grid,.nx-grid.top{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr;gap:36px}
 }
 @media (max-width:720px){
@@ -425,13 +460,14 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(-
   .niche-wrap{flex:none;width:100%}
   .niche{flex:none;width:100%}
   .foot nav{grid-template-columns:1fr 1fr}
-  .switch{bottom:10px;padding:5px 5px 5px 10px}
-  .switch .lb{display:none}
   .how,.peaks,.calc,.crit,.rates{padding:64px 0}
   .faq{padding:72px 0 64px}
   .panel{padding:18px}
   .ladder{padding-inline-start:24px}
   .rung .rg i,.rung .rg .sc{display:none}
+  .rt{grid-template-columns:118px repeat(var(--n,5),minmax(104px,1fr));min-width:calc(118px + var(--n,5) * 104px)}
+  .rt .c.lbl{padding-inline:14px;font-size:14px}
+  .rt .rate{grid-template-columns:36px 42px}
 }
 @media (max-width:520px){
   :root{--chartH:250px}
@@ -444,7 +480,8 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(-
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .wi,.rv,.col,.horizon,.acc path,.draw,.rule,.hero-ridges path{transition:none!important}
-  .hero-bg .mist,.stem,.flag path.cloth,.soon .trailp{animation:none}
+  .tree .grow,.tree .lf,.arch .lamp,.meter i{transition:none!important}
+  .tree .sw,.hero-bg .mist,.stem,.flag path.cloth,.soon .trailp{animation:none}
 }
 </style>
 </head>
@@ -505,7 +542,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(-
         <a class="btn btn-outline" href="#calc">محاسبه ارتفاع!</a>
       </div>
       <div class="facts">
-        <span class="fact rv" style="--d:1300">۹ پله از الوند تا دماوند</span>
+        <span class="fact rv" style="--d:1300">۹ قله از الوند تا دماوند</span>
         <span class="fact rv" style="--d:1380">بر اساس میزان فروش و امتیاز خوش‌حسابی</span>
         <span class="fact rv" style="--d:1460">ماهانه به‌روز می‌شود</span>
       </div>
@@ -513,10 +550,10 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(-
 
     <div class="hero-chart">
       <div class="chart" id="chart" data-variant="bars"></div>
-      <p class="chart-hint rv" style="--d:1600">برای دیدن نام و ارتفاع هر قله، روی آن بزنید.</p>
+      <p class="chart-hint rv" style="--d:1600">برای دیدن شرایط و سود هر قله، روی آن بزنید.</p>
       <div class="chart-foot rv" style="--d:1500">
         <span>نقطه شروع: جشنواره متوقف و دریافت کارمزد پایه</span>
-        <span>هر ماه حداکثر یک پله ←</span>
+        <span>هر ماه حداکثر یک قله ←</span>
       </div>
     </div>
   </div>
@@ -526,13 +563,13 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(-
   <div class="wrap">
     <div class="sec-head">
       <h2 class="h2" id="how-title" data-split="0">از این‌جا تا دماوند</h2>
-      <p class="lead rv" style="--d:250">چهار قدم ساده که پله و کارمزد شما را تعیین می‌کند.</p>
+      <p class="lead rv" style="--d:250">چهار قدم ساده که قله و کارمزد شما را تعیین می‌کند.</p>
     </div>
     <div class="steps">
       <article class="step rv" style="--d:350"><span class="n">۱</span><h3>ارزیابی اولیه</h3><p>رده‌بندی اولیه هر شریک، بر اساس بهترین عملکرد سه ماه گذشته محاسبه می‌شود.</p></article>
       <article class="step rv" style="--d:450"><span class="n">۲</span><h3>دو سنجه در هر ماه</h3><p>هر ماه فروش و امتیاز خوش‌حسابی شما به صورت مجزا بررسی می‌شود و بر اساس آن صعود یا کاهش ارتفاع خواهد داشت.</p></article>
-      <article class="step rv" style="--d:550"><span class="n">۳</span><h3>ماهی یک قله</h3><p>جابه‌جایی تدریجی است. در هر ماه حداکثر یک پله بالا یا پایین می‌روید، پس ثبات عملکرد اهمیت دارد.</p></article>
-      <article class="step rv" style="--d:650"><span class="n">۴</span><h3>کارمزد خود را بگیرید</h3><p>کارمزدهای جشنواره بر اساس پله شما تعیین می‌شود: <b>تا ۴۰٪ در فروش نقدی</b> و تا <b>۲۱٪ در فروش قسطی</b>.</p></article>
+      <article class="step rv" style="--d:550"><span class="n">۳</span><h3>ماهی یک قله</h3><p>جابه‌جایی تدریجی است. در هر ماه حداکثر یک قله بالا یا پایین می‌روید، پس ثبات عملکرد اهمیت دارد.</p></article>
+      <article class="step rv" style="--d:650"><span class="n">۴</span><h3>کارمزد خود را بگیرید</h3><p>کارمزدهای جشنواره بر اساس قله شما تعیین می‌شود: <b>تا ۴۰٪ در فروش نقدی</b> و تا <b>۲۱٪ در فروش قسطی</b>.</p></article>
     </div>
   </div>
 </section>
@@ -541,45 +578,16 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(-
   <div class="wrap">
     <div class="sec-head">
       <h2 class="h2" id="peaks-title" data-split="0">نُه قله، از الوند تا دماوند</h2>
-      <p class="lead rv" style="--d:250">برای رسیدن به هر پله، هر دو شرط آن باید برقرار باشد. نشانگر را روی نام هر قله ببرید تا با آن آشنا شوید.</p>
+      <p class="lead rv" style="--d:250">برای رسیدن به هر قله، هر دو شرط آن باید برقرار باشد. نشانگر را روی نام هر قله ببرید تا حداقل فروش و سود آن را ببینید.</p>
     </div>
     <div class="ptable" id="ptable" role="table" aria-label="شرایط و کارمزد هر قله"></div>
     <p class="foot-note rv" style="--d:300">نرخ‌های کارمزد این جدول برای شرکت‌های بیمه درجه ۱ است.</p>
   </div>
 </section>
 
-<section class="calc sec" id="calc" aria-labelledby="calc-title">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 class="h2" id="calc-title" data-split="0">روی کدام قله‌ ایستاده‌ام؟</h2>
-      <p class="lead rv" style="--d:250">فروش و امتیاز خوش‌حسابی را تغییر دهید تا ببینید شایسته کدام قله هستید.</p>
-    </div>
-    <div class="calc-body">
-      <div class="panel rv" style="--d:350">
-        <p class="ladder-title" aria-live="polite">با این نتایج، شما بر قله <span class="pk" id="pkName">شاه‌البرز</span> می‌ایستید.</p>
-        <div class="ladder" id="ladder">
-          <svg class="flag" id="flag" viewBox="0 0 22 30" aria-hidden="true"><path d="M4 2v27" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path class="cloth" d="M5 3h13l-3.2 4.5L18 12H5Z" fill="currentColor"/></svg>
-        </div>
-        <div class="legend"><span><i class="dot s"></i>پله فروش</span><span><i class="dot q"></i>پله خوش‌حسابی</span></div>
-      </div>
-      <div class="side">
-        <div class="panel rv" style="--d:450">
-          <div class="ctrl">
-            <div class="hd"><label for="sales">فروش ماهانه</label><output id="salesOut" for="sales">۱٫۲ میلیارد تومان</output></div>
-            <input id="sales" type="range" min="0" max="1000" step="1" value="632" aria-describedby="salesRange">
-            <div class="rgx" id="salesRange"><span>صفر</span><span>۳ میلیارد تومان</span></div>
-          </div>
-          <div class="ctrl">
-            <div class="hd"><label for="score">امتیاز خوش‌حسابی</label><output id="scoreOut" for="score">۹۲</output></div>
-            <input id="score" type="range" min="84" max="100" step="1" value="92" aria-describedby="scoreRange">
-            <div class="rgx" id="scoreRange"><span>۸۴</span><span>۱۰۰</span></div>
-          </div>
-        </div>
-        <div class="panel next rv" style="--d:550" id="next" aria-live="polite"></div>
-      </div>
-    </div>
-  </div>
-</section>
+
+
+
 
 <section class="crit sec" id="criteria" aria-labelledby="crit-title">
   <div class="wrap">
@@ -609,12 +617,53 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(-
   </div>
 </section>
 
+<section class="calc sec" id="calc" aria-labelledby="calc-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2" id="calc-title" data-split="0">روی کدام قله‌ ایستاده‌ام؟</h2>
+      <p class="lead rv" style="--d:250">فروش و امتیاز خوش‌حسابی را تغییر دهید تا ببینید شایسته کدام قله هستید.</p>
+    </div>
+    <div class="calc-body">
+      <div class="panel rv" style="--d:350">
+        <p class="ladder-title" aria-live="polite">با این نتایج، شما بر قله <span class="pk" id="pkName">شاه‌البرز</span> می‌ایستید.</p>
+        <div class="ladder" id="ladder">
+          <svg class="flag" id="flag" viewBox="0 0 22 30" aria-hidden="true"><path d="M4 2v27" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path class="cloth" d="M5 3h13l-3.2 4.5L18 12H5Z" fill="currentColor"/></svg>
+        </div>
+        <div class="legend"><span><i class="dot s"></i>قله فروش</span><span><i class="dot q"></i>قله خوش‌حسابی</span></div>
+      </div>
+      <div class="side">
+        <div class="panel rv" style="--d:450">
+          <div class="ctrl">
+            <div class="hd"><label for="sales">فروش ماهانه</label><output id="salesOut" for="sales">۱٫۲ میلیارد تومان</output></div>
+            <input id="sales" type="range" min="0" max="1000" step="1" value="632" aria-describedby="salesRange">
+            <div class="rgx" id="salesRange"><span>صفر</span><span>۳ میلیارد تومان</span></div>
+          </div>
+          <div class="ctrl">
+            <div class="hd"><label for="score">امتیاز خوش‌حسابی</label><output id="scoreOut" for="score">۹۲</output></div>
+            <input id="score" type="range" min="84" max="100" step="1" value="92" aria-describedby="scoreRange">
+            <div class="rgx" id="scoreRange"><span>۸۴</span><span>۱۰۰</span></div>
+          </div>
+        </div>
+        <div class="panel mine rv" style="--d:550">
+          <div class="mine-hd">
+            <h3>کارمزد شما روی قله <span id="mineName">شاه‌البرز</span></h3>
+            <a class="mine-lnk" href="#rates">جزئیات کارمزد این قله<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.5v8M2.5 6.5 6 10l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+          <div class="mine-st"><div><span>کارمزد نقدی تا</span><b id="mineCash">۲۴٪</b></div><div><span>کارمزد قسطی تا</span><b id="mineInst">۱۴٪</b></div></div>
+          <p class="mine-cap">نرخ شرکت‌های بیمه درجه ۱ در بیمه ثالث</p>
+        </div>
+      </div>
+    </div>
+    <div class="panel next rv" style="--d:250" id="next" aria-live="polite"></div>
+  </div>
+</section>
+
 <section class="rates sec" id="rates" aria-labelledby="rates-title">
   <div class="wrap">
     <div class="rates-head">
       <div class="ttl">
-        <h2 class="h2" id="rates-title" data-split="0">جزئیات کارمزد هر قله</h2>
-        <p class="lead rv" style="--d:250">نرخ کل کارمزد برای سه گروه شرکت‌های بیمه. روی هر قله بزنید تا ستونش برجسته شود.</p>
+        <h2 class="h2" id="rates-title" data-split="0">جزئیات کارمزد قله</h2>
+        <p class="lead rv" style="--d:250">کارمزد قله فعلی شما، کنار قله‌های قبلی و بعدی و پایین‌ترین و بالاترین قله، برای سه گروه شرکت‌های بیمه.</p>
       </div>
       <div class="tabs rv" style="--d:300" role="tablist" aria-label="نوع بیمه">
         <span class="pill" aria-hidden="true"></span>
@@ -623,8 +672,8 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(-
       </div>
     </div>
     <div id="pn-tp" class="panelx" role="tabpanel" aria-labelledby="tab-tp">
-      <div class="legend2 rv" style="--d:350"><span>در هر خانه: <b>نقدی</b> بالا، قسطی پایین</span></div>
-      <div class="rt-scroll rv" style="--d:400"><div class="rt" id="rt"></div></div>
+      <div class="ctx rv" style="--d:350"><span>بر اساس محاسبه‌گر، شما روی این قله هستید:</span><span class="ctx-pk"><span class="b" id="ctxNum">۵</span><span id="ctxName">شاه‌البرز</span></span><a class="ctx-lnk" href="#calc">تغییر در محاسبه‌گر ↑</a></div>
+      <div class="rt-scroll rv" style="--d:400"><div class="rt" id="rt" aria-live="polite"></div></div>
     </div>
     <div id="pn-ot" class="panelx" role="tabpanel" aria-labelledby="tab-ot" hidden>
       <div class="soon">
@@ -660,7 +709,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(-
         <a class="btn btn-outline rv" style="--d:850" href="#calc">محاسبه ارتفاع</a>
       </div>
       <div class="niche-wrap rv" style="--d:100">
-        <div class="arch" id="arch"><canvas id="scene" aria-hidden="true"></canvas></div>
+        <div class="arch" id="arch"><span class="lamp" aria-hidden="true"></span><svg class="tree" id="tree" viewBox="0 0 512 480" preserveAspectRatio="xMidYMax meet" aria-hidden="true"></svg></div>
         <div class="sill"></div>
       </div>
     </div>
@@ -683,7 +732,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(-
             </svg>
             شرکای بیمه‌بازار
           </a>
-          <p class="tag rv" style="--d:420">پله‌پله تا دماوند، با فروش بیشتر و اقساط به‌موقع.</p>
+          <p class="tag rv" style="--d:420">قله به قله تا دماوند، با فروش بیشتر و اقساط به‌موقع.</p>
         </div>
         <nav aria-label="پیوندهای پایین صفحه">
           <div class="rv" style="--d:450"><h4>طرح</h4><ul><li><a href="#how">چطور کار می‌کند</a></li><li><a href="#peaks">قله‌ها</a></li><li><a href="#criteria">چطور صعود کنم</a></li></ul></div>
@@ -700,18 +749,11 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(-
   </div>
 </footer>
 
-<div class="switch" role="group" aria-label="مقایسه دو حالت هیرو">
-  <span class="lb">حالت هیرو</span>
-  <div class="seg" id="seg">
-    <span class="pill" aria-hidden="true"></span>
-    <button type="button" data-v="bars" aria-pressed="true">ستون‌ها</button>
-    <button type="button" data-v="peaks" aria-pressed="false">قله‌ها</button>
-  </div>
-</div>
-
 <div class="peakcard" id="peakcard" role="tooltip" aria-hidden="true">
   <div class="t"><span class="nm"></span><span class="ht"></span></div>
-  <p class="rg"></p><hr><p class="ds"></p>
+  <p class="rg"></p>
+  <div class="st"><div><span class="k">حداقل فروش ماهانه</span><b class="s1"></b></div><div><span class="k">حداقل سود تقریبی</span><b class="s2"></b></div><p class="cap"></p></div>
+  <hr><p class="ds"></p>
 </div>
 
 <script>
@@ -747,8 +789,8 @@ const CASH = [null, [0, 14, 16, 18, 20, 24, 28, 32, 36, 40], [0, 9, 11, 13, 15, 
 const INST = [null, [0, 8, 9, 10, 12, 14, 16, 18, 20, 21], [0, 5, 6, 7, 9, 10, 11, 12, 13, 14], [0, 3, 3, 3, 3, 4, 4, 5, 5, 6]];
 const FAQ = [
   ["امتیاز خوش‌حسابی دقیقاً چطور حساب می‌شود؟", "مبلغ اقساطی که بین ۲۰ام هر ماه تا ۲۰ام ماه بعد سررسید شده‌اند و هنوز پرداخت نشده‌اند، بر مبلغ کل فروش ماه شمسی قبل تقسیم می‌شود. امتیاز خوش‌حسابی برابر است با ۱۰۰ منهای درصد این نسبت."],
-  ["فروشم بالاست؛ چرا پله‌ام پایین است؟", "پله شما برابر با امتیاز پایین‌تر از بین فروش و خوش‌حسابی است. اگر امتیاز خوش‌حسابی پایین باشد، فروش بالا آن را جبران نمی‌کند."],
-  ["چرا در یک ماه بیشتر از یک پله بالا نرفتم؟", "جابه‌جایی بین پله‌ها تدریجی است. هر شریک در هر ماه فقط می‌تواند یک پله بالا یا پایین برود."],
+  ["فروشم بالاست؛ چرا قله‌ام پایین است؟", "قله شما برابر با امتیاز پایین‌تر از بین فروش و خوش‌حسابی است. اگر امتیاز خوش‌حسابی پایین باشد، فروش بالا آن را جبران نمی‌کند."],
+  ["چرا در یک ماه بیشتر از یک قله بالا نرفتم؟", "جابه‌جایی بین قله‌ها تدریجی است. هر شریک در هر ماه فقط می‌تواند یک قله بالا یا پایین برود."],
   ["نقطه شروع چیست؟", "اگر مجموع اقساط سررسیدشده و پرداخت‌نشده شما به ۲۰۰ میلیون تومان برسد، جشنواره‌های شما متوقف می‌شود و به نقطه شروع برمی‌گردید."],
   ["کارمزد آنی و آتی یعنی چه؟", "در فروش قسطی، بخشی از کارمزد بعد از صدور بیمه‌نامه (آنی) و بخش دیگر همراه با بازپرداخت اقساط (آتی) به حساب شما واریز می‌شود."],
   ["رده‌بندی اولیه من چطور تعیین می‌شود؟", "رده‌بندی اولیه شرکای فعلی و شرکایی که برای اولین‌بار سفارش ثبت می‌کنند، بر اساس عملکرد اولین ماه شمسی آن‌ها محاسبه می‌شود."],
@@ -801,11 +843,19 @@ $$("[data-split]").forEach((el) => {
 // ---------- peak card ----------
 const card = $("#peakcard");
 let cardFor = null;
+function peakStats(l) {
+  if (l === 0) return null;
+  const rate = CASH[1][l];
+  if (l === 1) return { sales: "بدون حداقل", profit: fa(rate) + "٪ از فروش", cap: "با نرخ نقدی " + fa(rate) + "٪ شرکت‌های درجه ۱" };
+  return { sales: money(SALES_MIN[l]) + " تومان", profit: money(SALES_MIN[l] * rate / 100) + " تومان", cap: "سود ماهانه با حداقل فروش و بیشترین کارمزد این قله (نقدی " + fa(rate) + "٪)" };
+}
 function showCard(el, l) {
-  const p = PEAKS[l];
-  $(".nm", card).textContent = l === 0 ? p.name + " · پله ۰" : p.name + " · پله " + fa(l);
+  const p = PEAKS[l], st = peakStats(l);
+  $(".nm", card).textContent = l === 0 ? p.name : p.name + " · قله " + fa(l);
   $(".ht", card).textContent = p.h ? fa(p.h.toLocaleString("en-US")) + " متر" : "";
   $(".rg", card).textContent = p.region;
+  $(".st", card).hidden = !st;
+  if (st) { $(".s1", card).textContent = st.sales; $(".s2", card).textContent = st.profit; $(".cap", card).textContent = st.cap; }
   $(".ds", card).textContent = p.desc;
   card.classList.add("show"); card.setAttribute("aria-hidden", "false");
   cardFor = el;
@@ -845,49 +895,18 @@ function bindCard(el, l) {
 
 // ---------- hero chart ----------
 const chart = $("#chart");
-function mtnSVG(p) {
-  const c = COL[p.l], d = shade(c, 0.78);
-  if (p.l === 0) return `<svg class="mtn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M8 100C24 100 32 30 50 30S76 100 92 100Z" fill="${c}" opacity=".6"/></svg>`;
-  const r = rng(p.l * 97 + 13);
-  const T = [0.16, 0.34, 0.54, 0.76];
-  const L = T.map((t) => [50 - 50 * t + (r() - 0.5) * 7, t * 100 + (r() - 0.5) * 6]);
-  const R = T.map((t) => [50 + 50 * t + (r() - 0.5) * 7, t * 100 + (r() - 0.5) * 6]);
-  const pt = (a) => a[0].toFixed(1) + " " + a[1].toFixed(1);
-  const out = `M0 100L${pt(L[3])}L${pt(L[2])}L${pt(L[1])}L${pt(L[0])}L47.6 2.4Q50 -0.6 52.4 2.4L${pt(R[0])}L${pt(R[1])}L${pt(R[2])}L${pt(R[3])}L100 100Z`;
-  const ridgeX = 58 + r() * 8;
-  const sh = `M52.4 2.4L${pt(R[0])}L${pt(R[1])}L${pt(R[2])}L${pt(R[3])}L100 100L${ridgeX.toFixed(1)} 100L${(53 + r() * 4).toFixed(1)} 55L${(51 + r() * 2).toFixed(1)} 24Z`;
-  let snow = "";
-  if (p.l >= 7) {
-    const s = p.l === 9 ? 30 : p.l === 8 ? 24 : 18;
-    const xl = 50 - s * 0.5, xr = 50 + s * 0.5;
-    let z = `M47.6 2.4Q50 -0.6 52.4 2.4L${xr.toFixed(1)} ${s}`;
-    for (let k = 1; k < 6; k++) { const x = xr - (xr - xl) * (k / 6); z += `L${x.toFixed(1)} ${(s + (k % 2 ? 7 : -1) + (r() - 0.5) * 3).toFixed(1)}`; }
-    z += `L${xl.toFixed(1)} ${s}Z`;
-    snow = `<path class="snowcap" d="${z}" fill="#FBF8F1"/>`;
-  }
-  const stroke = p.l === 9 ? ` stroke="#29211A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"` : "";
-  return `<svg class="mtn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="${out}" fill="${c}"/><path d="${sh}" fill="${d}" opacity=".55"/>${snow}${stroke ? `<path d="${out}" fill="none"${stroke}/>` : ""}</svg>`;
-}
-function renderChart(v, animate) {
-  chart.dataset.variant = v;
-  chart.classList.remove("go", "settled");
+(function renderChart() {
   chart.innerHTML = `<div class="stage"><span class="horizon"></span><div class="cols">${PEAKS.map((p) => {
     const bar = p.l === 0 ? 44 : 98 + (p.l - 1) * 34;
-    return `<button type="button" class="col lv${p.l}" data-l="${p.l}" aria-label="${p.name}${p.h ? "، " + fa(p.h) + " متر" : ""}" style="--r:${(bar / 420).toFixed(4)};--i:${p.l};--c:${COL[p.l]};--nc:${NUMC[p.l]};z-index:${20 - p.l}">
+    const st = peakStats(p.l);
+    const label = p.name + (p.h ? "، " + fa(p.h) + " متر" : "") + (st ? "، حداقل فروش " + st.sales + "، حداقل سود " + st.profit : "");
+    return `<button type="button" class="col lv${p.l}" data-l="${p.l}" aria-label="${label}" style="--r:${(bar / 420).toFixed(4)};--i:${p.l};--c:${COL[p.l]};--nc:${NUMC[p.l]};z-index:${20 - p.l}">
       <span class="col-name">${p.l === 0 ? "نقطه<br>شروع" : p.name}</span>
-      <span class="bar">${v === "peaks" ? mtnSVG(p) : ""}${v === "bars" && p.l === 9 ? '<span class="snow"></span>' : ""}<span class="num">${fa(p.l)}</span></span>
+      <span class="bar">${p.l === 9 ? '<span class="snow"></span>' : ""}<span class="num">${fa(p.l)}</span></span>
     </button>`;
   }).join("")}</div></div>`;
   $$(".col", chart).forEach((c) => bindCard(c, +c.dataset.l));
-  if (animate) {
-    void chart.offsetWidth;
-    requestAnimationFrame(() => { chart.classList.add("go"); setTimeout(() => chart.classList.add("settled"), reduced ? 0 : 260 + 9 * 85 + 1200); });
-  }
-}
-let variant = "bars";
-try { variant = localStorage.getItem("mrf-hero") || "bars"; } catch (e) {}
-if (variant !== "bars" && variant !== "peaks") variant = "bars";
-renderChart(variant, false);
+})();
 
 // hero backdrop ridges
 (function heroRidges() {
@@ -941,30 +960,15 @@ function countUp(el) {
   requestAnimationFrame(step);
 }
 
-// ---------- comparison switch ----------
-const seg = $("#seg");
+// ---------- sliding pill (tabs) ----------
 function placePill(group) {
-  const on = group.querySelector('[aria-pressed="true"],[aria-selected="true"]');
+  const on = group.querySelector('[aria-selected="true"]');
   const pill = group.querySelector(".pill");
   if (!on || !pill) return;
   const gr = group.getBoundingClientRect(), r = on.getBoundingClientRect();
   pill.style.width = r.width + "px";
   pill.style.insetInlineStart = (gr.right - r.right) + "px";
 }
-function setVariant(v, user) {
-  variant = v;
-  $$("button", seg).forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === v)));
-  placePill(seg);
-  try { localStorage.setItem("mrf-hero", v); } catch (e) {}
-  if (user) {
-    const hr = $("#hero").getBoundingClientRect();
-    if (hr.bottom < 120 || hr.top > innerHeight - 120) $("#hero").scrollIntoView({ behavior: reduced ? "auto" : "smooth" });
-    hideCard();
-    renderChart(v, true);
-  }
-}
-$$("button", seg).forEach((b) => b.addEventListener("click", () => { if (b.dataset.v !== variant) setVariant(b.dataset.v, true); }));
-setVariant(variant, false);
 
 // ---------- peaks table ----------
 (function peaksTable() {
@@ -984,27 +988,42 @@ setVariant(variant, false);
   $$(".chip").forEach((c) => bindCard(c, +c.dataset.l));
 })();
 
-// ---------- rates ----------
-let rateCol = null, rateManual = false;
-(function rates() {
-  const rt = $("#rt");
-  const lv = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+// ---------- rates: my peak in context ----------
+const rt = $("#rt");
+const TAG = { cur: "قله فعلی شما", prev: "قله قبلی", next: "قله بعدی", best: "بالاترین قله", worst: "پایین‌ترین قله" };
+let ratesFor = -1;
+function renderRates(pk) {
+  if (pk === ratesFor) return;
+  const first = ratesFor < 0;
+  ratesFor = pk;
+  const m = new Map();
+  const add = (l, t) => { if (!m.has(l)) m.set(l, []); m.get(l).push(t); };
+  add(pk, "cur"); add(pk - 1, "prev"); if (pk < 9) add(pk + 1, "next"); add(9, "best"); add(1, "worst");
+  const cols = [...m.entries()].sort((a, b) => a[0] - b[0]);
   let h = `<div class="c lbl hdr">شرکت بیمه</div>`;
-  lv.forEach((l) => { h += `<button type="button" class="c hdr" data-col="${l}" aria-label="برجسته کردن ${PEAKS[l].name}"><span class="bx">${fa(l)}</span><span class="nm">${PEAKS[l].name}</span></button>`; });
+  cols.forEach(([l, t]) => {
+    h += `<div class="c hdr${t.includes("cur") ? " hl" : ""}"><span class="tg">${t.map((k) => TAG[k]).join(" · ")}</span><span class="bx">${fa(l)}</span><span class="nm">${PEAKS[l].name}</span></div>`;
+  });
   [1, 2, 3].forEach((g) => {
     h += `<div class="c lbl">شرکت‌های درجه ${fa(g)}</div>`;
-    lv.forEach((l) => {
+    cols.forEach(([l, t]) => {
+      const hl = t.includes("cur") ? " hl" : "";
       h += l === 0
-        ? `<div class="c" data-col="0"><span class="base">پایه</span></div>`
-        : `<div class="c" data-col="${l}"><span class="cash">${fa(CASH[g][l])}٪</span><span class="inst">قسطی ${fa(INST[g][l])}٪</span></div>`;
+        ? `<div class="c${hl}"><span class="base">کارمزد پایه</span></div>`
+        : `<div class="c${hl}"><span class="rate"><i>نقدی</i><b>${fa(CASH[g][l])}٪</b></span><span class="rate"><i>قسطی</i><b>${fa(INST[g][l])}٪</b></span></div>`;
     });
   });
+  rt.style.setProperty("--n", cols.length);
   rt.innerHTML = h;
-  $$(".hdr[data-col]", rt).forEach((b) => b.addEventListener("click", () => { rateManual = true; highlight(+b.dataset.col); }));
-})();
-function highlight(l) {
-  rateCol = l;
-  $$("#rt [data-col]").forEach((c) => c.classList.toggle("hl", +c.dataset.col === l));
+  // keep "my peak" column in view when the table scrolls sideways (mobile)
+  const sc = rt.parentElement, hd = rt.querySelector(".hdr.hl"), lbl = rt.querySelector(".lbl");
+  if (sc.scrollWidth > sc.clientWidth + 1 && hd) {
+    const sr = sc.getBoundingClientRect(), hr = hd.getBoundingClientRect();
+    sc.scrollLeft += (hr.left + hr.width / 2) - (sr.left + (sc.clientWidth - lbl.offsetWidth) / 2);
+  }
+  $("#ctxNum").textContent = fa(pk);
+  $("#ctxName").textContent = PEAKS[pk].name;
+  if (!first && !reduced && rt.animate) rt.animate([{ opacity: 0.2, transform: "translateY(4px)" }, { opacity: 1, transform: "none" }], { duration: 450, easing: "cubic-bezier(.16,1,.3,1)" });
 }
 // tabs
 (function tabs() {
@@ -1022,8 +1041,8 @@ function highlight(l) {
     });
   });
   requestAnimationFrame(() => placePill(list));
-  addEventListener("resize", () => { placePill(list); placePill(seg); });
-  document.fonts && document.fonts.ready.then(() => { placePill(list); placePill(seg); });
+  addEventListener("resize", () => placePill(list));
+  document.fonts && document.fonts.ready.then(() => placePill(list));
 })();
 
 // ---------- calculator ----------
@@ -1039,15 +1058,56 @@ const salesFromPos = (p) => { const v = 3e9 * Math.pow(p / 1000, 2); return v < 
 const salesLvl = (s) => { let l = 1; for (let k = 2; k <= 9; k++) if (s >= SALES_MIN[k]) l = k; return l; };
 const scoreLvl = (q) => { let l = 1; for (let k = 2; k <= 9; k++) if (q > SCORE_GT[k]) l = k; return l; };
 function rangeTxt(lo, hi) {
-  if (hi < 1e9 && lo >= 1e6) return "حدود " + fa(Math.round(lo / 1e6)) + " الی " + fa(Math.round(hi / 1e6)) + " میلیون تومان";
-  return "حدود " + money(lo) + " الی " + money(hi) + " تومان";
+  if (hi < 1e9 && lo >= 1e6) {
+    const a = Math.round(lo / 1e6), b = Math.round(hi / 1e6);
+    return "حدود " + fa(a) + (a === b ? "" : " الی " + fa(b)) + " میلیون تومان";
+  }
+  const a = money(lo), b = money(hi);
+  return "حدود " + a + (a === b ? "" : " الی " + b) + " تومان";
 }
-let lastPeak = -1, lastNext = "";
-function swapText(el, html) {
-  if (el.innerHTML === html) return;
-  if (reduced) { el.innerHTML = html; return; }
-  el.classList.add("fade-swap", "out");
-  setTimeout(() => { el.innerHTML = html; el.classList.remove("out"); }, 160);
+let lastPeak = -1, now = null;
+function nextShell(pk) {
+  if (pk === 9) return `<div class="nx-hd"><span class="nx-eb">بام شرکا</span><h3>شما بر بلندترین قله ایستاده‌اید</h3></div>
+    <div class="nx-grid top">
+      <div class="nx-blk"><p class="nx-big">بالاترین نرخ‌ها مال شماست.<span class="nx-sm">با همین فروش و خوش‌حسابی، دماوند را نگه دارید. جابه‌جایی هر ماه حداکثر یک قله است.</span></p></div>
+      <div class="nx-blk gain"><span class="nx-lb">کارمزد شما روی دماوند</span><p class="nx-big">تا ۴۰٪ نقدی و تا ۲۱٪ قسطی</p></div>
+    </div>`;
+  const nx = pk + 1;
+  const req = (k, lb) => `<div class="nx-blk req" data-k="${k}"><div class="nx-row"><span class="nx-lb">${lb}</span><span class="nx-ok"></span></div><p class="nx-big"></p><div class="meter"><i></i></div><div class="nx-row nx-ft"><span class="now"></span><span class="tgt"></span></div></div>`;
+  return `<div class="nx-hd"><span class="nx-eb">قله بعدی · ${fa(nx)}</span><h3>چه چیزی مرا به ${PEAKS[nx].name} می‌برد؟</h3></div>
+    <div class="nx-grid">${req("s", "فروش ماهانه")}${req("q", "امتیاز خوش‌حسابی")}
+      <div class="nx-blk gain"><span class="nx-lb">سود بیشتر در هر ماه، روی ${PEAKS[nx].name}</span><p class="nx-big"></p><span class="nx-sm">کف بازه با نرخ قسطی و سقف آن با نرخ نقدی شرکت‌های درجه ۱ در بیمه ثالث</span></div>
+    </div>`;
+}
+function fillNext() {
+  const { pk, S, Q, sl, ql } = now;
+  if (pk === 9 || +nextEl.dataset.pk !== pk) return;
+  const nx = pk + 1;
+  const set = (k, ok, big, w, a, b) => {
+    const el = nextEl.querySelector(`.req[data-k="${k}"]`);
+    el.classList.toggle("ok", ok);
+    $(".nx-ok", el).textContent = ok ? "برقرار است ✓" : "";
+    $(".nx-big", el).innerHTML = big;
+    $(".meter i", el).style.setProperty("--w", clamp(w).toFixed(3));
+    $(".now", el).textContent = a; $(".tgt", el).textContent = b;
+  };
+  const sOk = sl >= nx, qOk = ql >= nx;
+  set("s", sOk, sOk ? "شرط فروش برقرار است" : `<b>${money(SALES_MIN[nx] - S)} تومان</b> فروش بیشتر`,
+    S / SALES_MIN[nx], "اکنون: " + (S <= 0 ? "صفر" : money(S)), "هدف: " + money(SALES_MIN[nx]));
+  const tq = SCORE_GT[nx] + 1, pts = tq - Q;
+  set("q", qOk, qOk ? "شرط خوش‌حسابی برقرار است" : `<b>${fa(pts)} امتیاز</b> بیشتر` + (S > 0 ? `<span class="nx-sm">یعنی حدود ${money(pts / 100 * S)} تومان قسط معوق کمتر</span>` : ""),
+    (Q - 84) / (tq - 84), "اکنون: " + fa(Q), "هدف: بالای " + fa(SCORE_GT[nx]));
+  const Sn = Math.max(S, SALES_MIN[nx]);
+  const lo = Sn * INST[1][nx] / 100 - S * INST[1][pk] / 100;
+  const hi = Sn * CASH[1][nx] / 100 - S * CASH[1][pk] / 100;
+  $(".gain .nx-big", nextEl).textContent = rangeTxt(lo, hi);
+}
+function setNext(pk) {
+  const html = nextShell(pk);
+  const put = () => { nextEl.innerHTML = html; nextEl.dataset.pk = pk; fillNext(); };
+  if (lastPeak < 0 || reduced) { put(); return; }
+  nextEl.classList.add("fade-swap", "out");
+  setTimeout(() => { if (now.pk === pk) put(); nextEl.classList.remove("out"); }, 160);
 }
 function calc() {
   const S = salesFromPos(+salesEl.value), Q = +scoreEl.value;
@@ -1056,36 +1116,20 @@ function calc() {
   $("#salesOut").textContent = S <= 0 ? "صفر" : money(S) + " تومان";
   $("#scoreOut").textContent = fa(Q);
   const sl = salesLvl(S), ql = scoreLvl(Q), pk = Math.min(sl, ql);
+  now = { pk, S, Q, sl, ql };
   $$(".rung", ladder).forEach((r) => { const l = +r.dataset.l; r.classList.toggle("cur", l === pk); r.classList.toggle("has-s", l === sl); r.classList.toggle("has-q", l === ql); });
   const cur = ladder.querySelector(`.rung[data-l="${pk}"]`);
   flag.style.transform = `translateY(${cur.offsetTop + 2}px)`;
   if (pk !== lastPeak) {
-    const n = $("#pkName");
-    if (lastPeak >= 0 && !reduced) { n.classList.add("swap"); setTimeout(() => { n.textContent = PEAKS[pk].name; n.classList.remove("swap"); }, 160); }
-    else n.textContent = PEAKS[pk].name;
+    const names = [$("#pkName"), $("#mineName")];
+    if (lastPeak >= 0 && !reduced) { names.forEach((n) => n.classList.add("swap")); setTimeout(() => names.forEach((n) => { n.textContent = PEAKS[pk].name; n.classList.remove("swap"); }), 160); }
+    else names.forEach((n) => (n.textContent = PEAKS[pk].name));
+    $("#mineCash").textContent = fa(CASH[1][pk]) + "٪";
+    $("#mineInst").textContent = fa(INST[1][pk]) + "٪";
+    renderRates(pk);
+    setNext(pk);
     lastPeak = pk;
-    if (!rateManual) highlight(pk);
-  }
-  let html;
-  if (pk === 9) {
-    html = `<h3>شما بر بام شرکا ایستاده‌اید</h3><p class="big"><b>تا ۴۰٪</b> کارمزد نقدی و <b>تا ۲۱٪</b> کارمزد قسطی<span class="sm">بالاترین نرخ‌ها مال شماست. با همین فروش و خوش‌حسابی، دماوند را نگه دارید.</span></p>`;
-    nextEl.classList.add("top");
-  } else {
-    nextEl.classList.remove("top");
-    const nx = pk + 1, need = [];
-    if (sl < nx) need.push(`<b>${money(SALES_MIN[nx] - S)} تومان</b> فروش بیشتر`);
-    if (ql < nx) {
-      const pts = SCORE_GT[nx] + 1 - Q;
-      const owed = S > 0 ? `<span class="sm">یعنی حدود ${money(pts / 100 * S)} تومان قسط معوق کمتر</span>` : "";
-      need.push(`امتیاز خوش‌حسابی <b>بالای ${fa(SCORE_GT[nx])}</b>${owed}`);
-    }
-    const Sn = Math.max(S, SALES_MIN[nx]);
-    const lo = Sn * INST[1][nx] / 100 - S * INST[1][pk] / 100;
-    const hi = Sn * CASH[1][nx] / 100 - S * CASH[1][pk] / 100;
-    html = `<h3>چه چیزی مرا به قله بعدی (${PEAKS[nx].name}) می‌برد؟</h3><p class="big">${(need.length > 1 ? "حدود " : sl < nx ? "حدود " : "") + need.join('<span class="and">و</span>')}</p>
-      <h3>در قله بعدی، هر ماه چقدر سود بیشتر خواهم داشت؟</h3><p class="big">${rangeTxt(lo, hi)}<span class="sm">کف بازه با نرخ قسطی و سقف آن با نرخ نقدی شرکت‌های درجه ۱ و بیمه ثالث</span></p>`;
-  }
-  if (html !== lastNext) { lastNext = html; swapText(nextEl, html); }
+  } else fillNext();
 }
 salesEl.addEventListener("input", calc);
 scoreEl.addEventListener("input", calc);
@@ -1134,234 +1178,57 @@ const go = () => { if (heroStarted) return; heroStarted = true; requestAnimation
 (document.fonts ? document.fonts.ready : Promise.resolve()).then(go);
 setTimeout(go, 700);
 
-// ---------- mountain scene (arch) ----------
-// Ported from Meadow Rise: ridges are painted once per size into offscreen
-// canvases (slope light, grass grain, snow, aerial haze) and composited per frame.
-(function scene() {
-  const canvas = $("#scene"), arch = $("#arch"), section = $("#cta");
-  const ctx = canvas.getContext("2d");
-  if (!ctx) return;
-  const P = {
-    sky: [[247, 241, 227], [238, 227, 203]], haze: [233, 222, 198], glow: [255, 244, 214], ground: [58, 46, 34], ink: [41, 33, 26],
-    hills: [[[218, 208, 190], [190, 180, 163]], [[204, 186, 148], [168, 150, 112]], [[187, 157, 102], [146, 118, 72]], [[160, 128, 76], [118, 90, 52]], [[124, 96, 57], [84, 63, 37]], [[80, 61, 39], [46, 35, 23]]],
+// ---------- cta niche: golden tree ----------
+(function tree() {
+  const svg = $("#tree"), arch = $("#arch"), section = $("#cta");
+  const f = (v) => (Math.round(v * 10) / 10).toString();
+  const cubic = (a, b, c, d) => (t) => { const u = 1 - t; return [u * u * u * a[0] + 3 * u * u * t * b[0] + 3 * u * t * t * c[0] + t * t * t * d[0], u * u * u * a[1] + 3 * u * u * t * b[1] + 3 * u * t * t * c[1] + t * t * t * d[1]]; };
+  const tan = (fn, t) => { const a = fn(Math.max(0, t - 0.01)), b = fn(Math.min(1, t + 0.01)), l = Math.hypot(b[0] - a[0], b[1] - a[1]) || 1; return [(b[0] - a[0]) / l, (b[1] - a[1]) / l]; };
+  const from = (fn, t, c1, c2, end) => { const s0 = fn(t); return cubic(s0, [s0[0] + c1[0], s0[1] + c1[1]], [end[0] + c2[0], end[1] + c2[1]], end); };
+  const trunk = cubic([256, 472], [234, 404], [272, 318], [257, 168]);
+  const b1 = from(trunk, 0.36, [-24, -6], [26, 26], [174, 320]);
+  const b2 = from(trunk, 0.27, [26, -4], [-28, 30], [356, 314]);
+  const b3 = from(trunk, 0.6, [-14, -10], [18, 22], [198, 234]);
+  const b4 = from(trunk, 0.7, [14, -8], [-14, 22], [322, 204]);
+  const t1 = from(b2, 0.5, [4, -14], [-6, 16], [318, 262]);
+  const t2 = from(b1, 0.55, [-2, -14], [6, 16], [218, 276]);
+  const LIMBS = [[trunk, 14, 4, 10], [b1, 6.8, 2.2], [b2, 7.2, 2.2], [b3, 5.2, 1.9], [b4, 4.8, 1.8], [t1, 3.4, 1.6], [t2, 3.2, 1.6]];
+  const LEAVES = [[trunk, 1, 0, 46], [trunk, 0.86, 1, 40], [trunk, 0.77, -1, 38], [b1, 1, 0, 42], [b1, 0.42, 1, 36], [b1, 0.75, -1, 38],
+    [b2, 1, 0, 42], [b2, 0.4, -1, 36], [b2, 0.74, 1, 38], [b3, 1, 0, 38], [b3, 0.55, 1, 34], [b3, 0.25, -1, 30],
+    [b4, 1, 0, 38], [b4, 0.5, -1, 34], [b4, 0.2, 1, 30], [t1, 1, 0, 34], [t2, 1, 0, 34]];
+  const limb = ([fn, w0, w1, flare = 0]) => {
+    const N = 28, L = [], R = [];
+    for (let i = 0; i <= N; i++) {
+      const t = i / N, p = fn(t), [dx, dy] = tan(fn, t), w = (w0 + (w1 - w0) * t + flare * Math.pow(1 - t, 8)) / 2;
+      L.push(f(p[0] - dy * w) + " " + f(p[1] + dx * w)); R.push(f(p[0] + dy * w) + " " + f(p[1] - dx * w));
+    }
+    const e = fn(1);
+    return `<path d="M${L.join("L")}L${R.reverse().join("L")}Z"/><circle cx="${f(e[0])}" cy="${f(e[1])}" r="${f(w1 / 2)}"/>`;
   };
-  const WORLD = 640, MX = 30, n = P.hills.length, seed = 5;
-  const noise = (() => {
-    const rnd = rng(seed * 7919 + 17), G = 32, lat = new Float32Array(G * G);
-    for (let i = 0; i < lat.length; i++) lat[i] = rnd();
-    const out = new Float32Array(65536);
-    for (let y = 0; y < 256; y++) {
-      const gy = y / 8, y0 = Math.floor(gy), fy = gy - y0, sy = fy * fy * (3 - 2 * fy), r0 = (y0 % G) * G, r1 = ((y0 + 1) % G) * G;
-      for (let x = 0; x < 256; x++) {
-        const gx = x / 8, x0 = Math.floor(gx), fx = gx - x0, sx = fx * fx * (3 - 2 * fx), c0 = x0 % G, c1 = (x0 + 1) % G;
-        const a = lat[r0 + c0] + (lat[r0 + c1] - lat[r0 + c0]) * sx, b = lat[r1 + c0] + (lat[r1 + c1] - lat[r1 + c0]) * sx;
-        out[(y << 8) | x] = a + (b - a) * sy;
-      }
-    }
-    return out;
-  })();
-  const sample = (x, y) => {
-    const x0 = x | 0, y0 = y | 0, fx = x - x0, fy = y - y0, xa = x0 & 255, xb = (x0 + 1) & 255, ya = (y0 & 255) << 8, yb = ((y0 + 1) & 255) << 8;
-    const a = noise[ya | xa] + (noise[ya | xb] - noise[ya | xa]) * fx, b = noise[yb | xa] + (noise[yb | xb] - noise[yb | xa]) * fx;
-    return a + (b - a) * fy;
+  const leaf = ([fn, t, side, L0]) => {
+    const L = L0 * 1.2;
+    const p = fn(t), [dx, dy] = tan(fn, t), a = Math.atan2(dy, dx) + side * 0.95, W = L * 0.46;
+    const lit = -0.35 * Math.sin(a) + Math.cos(a) > 0;
+    const up = `M0 0C${f(L * 0.22)} ${f(-W)} ${f(L * 0.68)} ${f(-W * 0.86)} ${f(L)} 0Z`, dn = `M0 0C${f(L * 0.22)} ${f(W)} ${f(L * 0.68)} ${f(W * 0.86)} ${f(L)} 0Z`;
+    const d = Math.round(700 + ((472 - p[1]) / 300) * 1000);
+    return `<g transform="translate(${f(p[0])} ${f(p[1])}) rotate(${f(a * 57.2958)})"><g class="lf" style="--d:${d}"><path d="${up}" fill="url(#${lit ? "lfL" : "lfD"})"/><path d="${dn}" fill="url(#${lit ? "lfD" : "lfL"})"/><path class="rib" d="M${f(L * 0.05)} 0Q${f(L * 0.5)} ${f(-W * 0.08)} ${f(L * 0.9)} 0"/></g></g>`;
   };
-  function spec(i) {
-    const q = i / (n - 1), r = rng(seed * 977 + i * 131 + 7);
-    let domes = [];
-    if (i === 0) domes = [{ c: -0.06, w: 0.34, h: 1, p: 1.18 }, { c: 0.6, w: 0.3, h: 0.42, p: 1.35 }, { c: -0.72, w: 0.28, h: 0.36, p: 1.35 }];
-    else {
-      const count = q > 0.85 ? 2 : 3, span = 2.3 / count, lean = i % 2 ? 1 : -1;
-      for (let k = 0; k < count; k++) {
-        const c = -1.15 + (k + 0.2 + r() * 0.6) * span;
-        domes.push({ c, w: (0.24 + r() * 0.22) * (1 + q * 0.8), h: 0.42 + r() * 0.42 + 0.14 * clamp(0.5 + c * lean * 0.6), p: 1.2 + q * 0.8 });
-      }
-    }
-    return {
-      q, domes, base: 0.5 + q * 0.44, amp: i === 0 ? 0.37 : 0.31 - q * 0.21,
-      waves: [{ f: 1.4 + r() * 1.2, p: r() * 6.28, a: 0.045 }, { f: 5 + r() * 3, p: r() * 6.28, a: 0.02 * (1 - q) + 0.006 }, { f: 13 + r() * 6, p: r() * 6.28, a: 0.009 * (1 - q) }],
-      depth: 0.18 + q * 0.3, haze: i === 0 ? 0.2 : 0.04 + 0.42 * Math.pow(1 - q, 1.6), snow: i === 0 ? 1 : i === 1 ? 0.55 : 0, snowLine: i === 0 ? 0.27 : 0.4,
-    };
-  }
-  const specs = Array.from({ length: n }, (_, i) => spec(i));
-  function crestAt(s, x, W, H) {
-    const u = (x - W / 2) / WORLD;
-    let sum = 0;
-    for (const d of s.domes) { const z = Math.abs((u - d.c) / d.w); sum += Math.exp(14 * d.h * Math.exp(-Math.pow(z, d.p))); }
-    let wave = 0; for (const o of s.waves) wave += o.a * Math.sin(u * o.f * 6.2832 + o.p);
-    return H * (s.base - s.amp * (Math.log(sum) / 14 + wave));
-  }
-  const LV = (() => { const v = [0.48, 0.74, 0.46], l = Math.hypot(...v); return v.map((c) => c / l); })();
-  const shadeFn = (m, t) => {
-    const f = Math.pow(clamp(t), 0.6), nx = m * 2.4 * (1 - f), ny = 1 - f + 0.18, nz = 0.22 + f * 1.15, l = Math.hypot(nx, ny, nz);
-    return clamp(0.12 + 0.88 * (nx * LV[0] + ny * LV[1] + nz * LV[2]) / l);
-  };
-  const STEPS = 64;
-  function paint(px, w, h, o, c0, c1) {
-    const { s, top, W, H, sp, lit, sh: shd } = o;
-    const out = new Uint32Array(px.buffer, px.byteOffset, w * h);
-    const q = sp.q, depthPx = Math.max(1, sp.depth * H), A1 = 0.26 + 0.18 * q, A2 = 0.06 + 0.16 * q, A3 = 0.05 + 0.11 * q, lane = q * 97 + 4096;
-    const detailRows = Math.max(0, Math.min(h, Math.ceil((o.detailTo - top) * s)));
-    const dn = Math.ceil(depthPx * s) + 2, hzL = new Float32Array(dn), tL = new Uint8Array(dn), darkL = new Float32Array(dn);
-    for (let j = 0; j < dn; j++) { const d = j / s, t = clamp(d / depthPx); hzL[j] = clamp(sp.haze + 0.16 * (1 - q) * Math.exp(-d / 9) + 0.2 * (1 - q) * t * t); tL[j] = Math.round(t * (STEPS - 1)); darkL[j] = 1 - 0.3 * t * t; }
-    const shadeT = new Float32Array(128 * STEPS);
-    for (let mi = 0; mi < 128; mi++) { const mm = (mi / 127) * 4 - 2; for (let k = 0; k < STEPS; k++) shadeT[mi * STEPS + k] = shadeFn(mm, k / (STEPS - 1)); }
-    const [sR, sG, sB] = shd, dR = lit[0] - sR, dG = lit[1] - sG, dB = lit[2] - sB, [hR, hG, hB] = P.haze;
-    const snowY = H * sp.snowLine;
-    for (let c = Math.max(0, c0); c < Math.min(w, c1); c++) {
-      const X = (c + 0.5) / s - MX, cy = crestAt(sp, X, W, H);
-      const m = ((crestAt(sp, X + 1 / s, W, H) - crestAt(sp, X - 1 / s, W, H)) * s) / 2;
-      const row = Math.round((Math.max(-2, Math.min(2, m)) + 2) * 31.75) * STEPS;
-      const cyRow = (cy - top) * s, start = Math.max(0, Math.floor(cyRow) - 1);
-      const pX = X * 0.05 + lane, cX = X * 0.3 + 4096;
-      for (let r = start; r < h; r++) {
-        const dd = r + 0.5 - cyRow, cov = dd + 0.5;
-        if (cov <= 0) continue;
-        const j = dd < 0 ? 0 : dd >= dn ? dn - 1 : dd | 0;
-        const shv = shadeT[row + tL[j]] * darkL[j];
-        let R = sR + dR * shv, G = sG + dG * shv, B = sB + dB * shv;
-        if (r < detailRows) {
-          const d = dd / s, Y = top + (r + 0.5) / s;
-          const patch = sample(pX, d * 0.09 + Y * 0.02 + lane) - 0.5, clump = sample(cX, d * 1.25 + lane) - 0.5;
-          let g = Math.imul(c + 7919, 374761393) ^ Math.imul(r + 104729, 668265263); g = Math.imul(g ^ (g >>> 13), 1274126177);
-          const grain = ((g ^ (g >>> 16)) >>> 0) / 4294967296 - 0.5;
-          const tex = 1 + patch * A1 + clump * A2 + grain * A3;
-          R *= tex; G *= tex; B *= tex;
-          if (sp.snow > 0) {
-            const nz = sample(X * 0.09 + 900, Y * 0.12 + 300) - 0.5;
-            const sn = sp.snow * smooth(-0.015, 0.045, (snowY - Y) / H + nz * 0.1 - (d / H) * 0.12);
-            if (sn > 0) {
-              const k = 0.72 + 0.28 * shv;
-              R += (251 * k - R) * sn; G += (248 * k - G) * sn; B += (241 * k - B) * sn;
-            }
-          }
-        }
-        const hz = hzL[j];
-        R += (hR - R) * hz; G += (hG - G) * hz; B += (hB - B) * hz;
-        const A = cov >= 1 ? 255 : (cov * 255) | 0;
-        out[r * w + c] = ((A << 24) | ((B > 255 ? 255 : B < 0 ? 0 : B | 0) << 16) | ((G > 255 ? 255 : G < 0 ? 0 : G | 0) << 8) | (R > 255 ? 255 : R < 0 ? 0 : R | 0)) >>> 0;
-      }
-    }
-  }
-  function mistBand(w, h) {
-    const out = new Float32Array(w * h);
-    for (let y = 0; y < h; y++) {
-      const v = (y + 0.5) / h, bell = Math.exp(-Math.pow((v - 0.55) / 0.22, 2));
-      for (let x = 0; x < w; x++) {
-        const nx = (x * 256) / w;
-        const a = noise[((((y * 96) / h) | 0) << 8) | (nx | 0)], b = noise[(((((y * 40) / h) | 0) + 128) << 8) | (((nx * 2) | 0) & 255)];
-        out[y * w + x] = clamp((a * 0.65 + b * 0.35 - 0.36) * 2.6) * bell;
-      }
-    }
-    return out;
-  }
-  const css = (c, a) => `rgba(${c[0]},${c[1]},${c[2]},${a})`;
-  let W = 1, H = 1, cs = 1, layers = [], building = n, job = null, mistC = null, sig = "";
-  let tx = 0, ty = 0, px = 0, py = 0, k = 1, kT = 1, visible = false, seenAt = null, revealAt = null, raf = 0, last = 0;
-  function measure() {
-    W = Math.max(1, canvas.clientWidth); H = Math.max(1, canvas.clientHeight);
-    cs = Math.min(devicePixelRatio || 1, 2);
-    const cw = Math.round(W * cs), ch = Math.round(H * cs);
-    if (canvas.width !== cw || canvas.height !== ch) { canvas.width = cw; canvas.height = ch; }
-    const s2 = W + "x" + H;
-    if (s2 !== sig) { const first = !sig; sig = s2; const goB = () => { building = 0; job = null; makeMist(); wake(); }; if (first) goB(); else setTimeout(goB, 140); }
-  }
-  function startJob(i) {
-    const sp = specs[i];
-    let minC = Infinity; for (let x = -MX; x <= W + MX; x += 3) minC = Math.min(minC, crestAt(sp, x, W, H));
-    const top = Math.floor(minC - 4), s = Math.min(devicePixelRatio || 1, 1.5);
-    const w = Math.ceil((W + MX * 2) * s), h = Math.ceil((H - top) * s);
-    if (h <= 0) return null;
-    const c = document.createElement("canvas"); c.width = w; c.height = h;
-    const g = c.getContext("2d");
-    let detailTo = H;
-    if (i + 1 < n) { let maxC = -Infinity; for (let x = -MX; x <= W + MX; x += 3) maxC = Math.max(maxC, crestAt(specs[i + 1], x, W, H)); detailTo = Math.min(H, maxC + 50); }
-    return { i, c, g, img: g.createImageData(w, h), o: { s, top, W, H, sp, lit: P.hills[i][0], sh: P.hills[i][1], detailTo }, w, h, col: 0 };
-  }
-  function work(budget) {
-    const t0 = performance.now();
-    while (building < n && performance.now() - t0 < budget) {
-      if (!job) job = startJob(building);
-      if (!job) { building++; continue; }
-      const nx = Math.min(job.w, job.col + 40);
-      paint(job.img.data, job.w, job.h, job.o, job.col, nx);
-      job.col = nx;
-      if (job.col >= job.w) { job.g.putImageData(job.img, 0, 0); layers[job.i] = { c: job.c, top: job.o.top, w: job.w / job.o.s, h: job.h / job.o.s }; job = null; building++; }
-    }
-  }
-  const progress = () => (building >= n ? 1 : (building + (job ? job.col / job.w : 0)) / n);
-  function makeMist() {
-    const w = 256, h = 56, a = mistBand(w, h), c = document.createElement("canvas"); c.width = w; c.height = h;
-    const g = c.getContext("2d"), img = g.createImageData(w, h);
-    for (let i = 0; i < a.length; i++) { img.data[i * 4] = P.haze[0]; img.data[i * 4 + 1] = P.haze[1]; img.data[i * 4 + 2] = P.haze[2]; img.data[i * 4 + 3] = a[i] * 255; }
-    g.putImageData(img, 0, 0); mistC = c;
-  }
-  function draw(now) {
-    const dt = revealAt === null ? -1 : now - revealAt;
-    ctx.setTransform(cs, 0, 0, cs, 0, 0);
-    const sky = ctx.createLinearGradient(0, 0, 0, H * 0.75);
-    sky.addColorStop(0, css(P.sky[0], 1)); sky.addColorStop(1, css(P.sky[1], 1));
-    ctx.fillStyle = sky; ctx.fillRect(0, 0, W, H);
-    const ox = W * (0.32 + px * 0.35), oy = H * 0.16 + py * H * 0.08;
-    const dawn = dt < 0 ? 0 : smooth(0, 1600, dt);
-    const R = Math.max(W, H) * 0.7, glow = ctx.createRadialGradient(ox, oy, 0, ox, oy, R);
-    glow.addColorStop(0, css(P.glow, 0.9 * dawn)); glow.addColorStop(0.35, css(P.glow, 0.34 * dawn)); glow.addColorStop(1, css(P.glow, 0));
-    ctx.fillStyle = glow; ctx.fillRect(0, 0, W, H);
-    if (dt < 1400 && (dt >= 0 || seenAt !== null)) {
-      const p = dt >= 0 ? 1 : Math.min(progress(), ease((now - (seenAt || now)) / 900));
-      const lw = ease(p) * W * 0.78, la = (1 - (dt < 0 ? 0 : smooth(150, 1100, dt))) * 0.4;
-      if (la > 0 && lw > 0.5) {
-        const y = Math.round(H * specs[0].base), lg = ctx.createLinearGradient(W / 2 - lw / 2, 0, W / 2 + lw / 2, 0);
-        lg.addColorStop(0, css(P.ink, 0)); lg.addColorStop(0.5, css(P.ink, la)); lg.addColorStop(1, css(P.ink, 0));
-        ctx.fillStyle = lg; ctx.fillRect(W / 2 - lw / 2, y, lw, 1);
-      }
-    }
-    const par = reduced ? 0 : 1 - k;
-    for (let i = 0; i < (dt < 0 ? 0 : n); i++) {
-      const L = layers[i]; if (!L) continue;
-      const e = dt < 0 ? 0 : ease((dt - 150 - i * 130) / 1700);
-      const rise = (1 - e) * H * (0.22 + 0.07 * i), sy = par * (8 + i * 18), lx = -px * (2 + i * 6), ly = -py * (1 + i * 2);
-      ctx.drawImage(L.c, -MX + lx, L.top + rise + sy + ly, L.w, L.h);
-      if (mistC && (i === 1 || i === 3) && i + 1 < n) {
-        const bw = W * 1.7, bh = H * (i === 1 ? 0.24 : 0.18), speed = i === 1 ? 7 : 11;
-        const off = reduced ? 0 : ((now * speed) / 1000) % bw;
-        const y = H * specs[i + 1].base - H * specs[i + 1].amp * 0.6 - bh * 0.5 + rise * 0.6 + sy;
-        ctx.globalAlpha = 0.55 * (i === 1 ? 0.9 : 0.65) * (dt < 0 ? 0 : smooth(900, 2600, dt));
-        ctx.drawImage(mistC, -off + lx * 1.4, y, bw, bh); ctx.drawImage(mistC, bw - off + lx * 1.4, y, bw, bh);
-        ctx.globalAlpha = 1;
-      }
-    }
-    ctx.globalCompositeOperation = "soft-light";
-    const pool = ctx.createRadialGradient(ox, H * 0.72, 0, ox, H * 0.72, W * 0.6);
-    pool.addColorStop(0, css(P.glow, 0.45 * dawn)); pool.addColorStop(1, css(P.glow, 0));
-    ctx.fillStyle = pool; ctx.fillRect(0, 0, W, H);
-    ctx.globalCompositeOperation = "source-over";
-    const fog = dt < 0 ? 1 : 1 - smooth(100, 2100, dt);
-    if (fog > 0) { const f = ctx.createLinearGradient(0, 0, 0, H); f.addColorStop(0, css(P.sky[0], fog)); f.addColorStop(1, css(P.sky[1], fog)); ctx.fillStyle = f; ctx.fillRect(0, 0, W, H); }
-    const gg = ctx.createLinearGradient(0, H * 0.84, 0, H);
-    gg.addColorStop(0, css(P.ground, 0)); gg.addColorStop(1, css(P.ground, 0.55));
-    ctx.fillStyle = gg; ctx.fillRect(0, H * 0.84, W, H * 0.16 + 1);
-  }
-  function tick(now) {
-    raf = 0;
-    const busy = building < n;
-    if (busy) work(revealAt === null ? 12 : visible ? 8 : 6);
-    if (revealAt === null && seenAt !== null && !busy && (reduced || now - seenAt > 500)) revealAt = reduced ? -1e9 : now;
-    if (!visible) { if (busy) raf = requestAnimationFrame(tick); return; }
-    if (!reduced) { const r = arch.getBoundingClientRect(); kT = clamp((innerHeight - r.top) / Math.max(1, Math.min(innerHeight, r.height + innerHeight * 0.4))); } else kT = 1;
-    px += ((reduced ? 0 : tx) - px) * 0.06; py += ((reduced ? 0 : ty) - py) * 0.06; k += (kT - k) * 0.1;
-    const easing = Math.abs(tx - px) > 0.001 || Math.abs(ty - py) > 0.001 || Math.abs(kT - k) > 0.001;
-    const intro = (revealAt === null && seenAt !== null) || (revealAt !== null && now - revealAt < 3000);
-    const ambient = !reduced;
-    if (busy || intro || easing || now - last > 33) { draw(now); last = now; }
-    if (busy || intro || easing || ambient) raf = requestAnimationFrame(tick);
-  }
-  function wake() { if (!raf && (visible || building < n)) raf = requestAnimationFrame(tick); }
-  section.addEventListener("pointermove", (e) => { const r = arch.getBoundingClientRect(); tx = Math.max(-0.5, Math.min(0.5, (e.clientX - r.left) / r.width - 0.5)); ty = Math.max(-0.5, Math.min(0.5, (e.clientY - r.top) / r.height - 0.5)); wake(); });
-  section.addEventListener("pointerleave", () => { tx = 0; ty = 0; wake(); });
-  addEventListener("scroll", wake, { passive: true });
-  new ResizeObserver(() => { measure(); draw(performance.now()); wake(); }).observe(arch);
-  new IntersectionObserver((es) => { const e = es[0]; visible = e.isIntersecting; if (e.isIntersecting && e.intersectionRatio >= 0.15 && seenAt === null) seenAt = performance.now(); if (visible) wake(); }, { threshold: [0, 0.15, 0.4] }).observe(arch);
-  measure(); draw(performance.now()); wake();
+  const body = `<g fill="url(#bark)">${LIMBS.map(limb).join("")}</g>${LEAVES.map(leaf).join("")}`;
+  svg.innerHTML = `<defs>
+    <linearGradient id="bark" gradientUnits="userSpaceOnUse" x1="226" y1="0" x2="292" y2="0"><stop offset="0" stop-color="#D6BF98"/><stop offset="1" stop-color="#AE8F64"/></linearGradient>
+    <linearGradient id="lfL" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E6B24E"/><stop offset="1" stop-color="#F3CC6E"/></linearGradient>
+    <linearGradient id="lfD" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#C98F33"/><stop offset="1" stop-color="#DCA847"/></linearGradient>
+    <filter id="tsh" x="-20%" y="-20%" width="140%" height="140%"><feColorMatrix type="matrix" values="0 0 0 0 .42  0 0 0 0 .3  0 0 0 0 .16  0 0 0 .3 0"/><feGaussianBlur stdDeviation="4.5"/></filter>
+    <filter id="soft" x="-50%" y="-200%" width="200%" height="500%"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <g class="grow">
+    <ellipse cx="260" cy="472" rx="44" ry="5" fill="rgba(110,80,40,.3)" filter="url(#soft)"/>
+    <g transform="translate(258 472) scale(1.1) translate(-258 -472)"><g class="shadow"><g filter="url(#tsh)"><g class="sw">${body}</g></g></g>
+    <g class="sw">${body}</g></g>
+  </g>`;
+  if (reduced) return;
+  section.addEventListener("pointermove", (e) => { const r = arch.getBoundingClientRect(); arch.style.setProperty("--lx", Math.max(-0.5, Math.min(0.5, (e.clientX - r.left) / r.width - 0.5)).toFixed(3)); });
+  section.addEventListener("pointerleave", () => arch.style.setProperty("--lx", "0"));
 })();
 
 // ---------- footer ridges + botany ----------
