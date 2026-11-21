@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="قله‌های شرکا: طرح کارمزد عملکردی شرکای بیمه‌بازار. بر اساس فروش و امتیاز خوش‌حسابی روی یکی از ۹ قله قرار بگیرید و تا ۴۰٪ کارمزد نقدی و تا ۲۱٪ کارمزد قسطی بگیرید.">
+<meta name="theme-color" content="#F4EFE3">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fa_IR">
+<meta property="og:title" content="قله‌های شرکا | شرکای بیمه‌بازار">
+<meta property="og:description" content="هر قله بالاتر، کارمزد بیشتر. تا ۴۰٪ کارمزد نقدی و تا ۲۱٪ کارمزد قسطی.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/DanaVF.woff2" as="font" type="font/woff2" crossorigin>
+<title>قله‌های شرکا | شرکای بیمه‌بازار</title>
+<style>
+@font-face{font-family:"DanaVF";src:url("fonts/DanaVF.woff2") format("woff2-variations"),url("fonts/DanaVF.woff2") format("woff2"),url("fonts/DanaVF.woff") format("woff");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Vazirmatn";src:url("fonts/Vazirmatn.woff2") format("woff2");font-weight:100 900;font-display:swap}
+
+:root{
+  --paper:#F4EFE3;--paper-2:#EDE5D3;--paper-3:#E6DCC7;--card:#FBF8F1;
+  --line:#E3D9C6;--line-2:#CFC2AA;
+  --ink:#29211A;--ink-2:#4D3D2D;--body:#5D5246;--muted:#7B6F61;
+  --brick:#E2B44A;--brick-2:#CFA03F;--brick-soft:rgba(226,180,74,.18);
+  --night:#27201A;--night-2:#322920;--night-3:#47392B;--night-text:#F3EEE3;--night-muted:#CDBFA8;
+  --ground:#221B15;
+  --font:"DanaVF","Vazirmatn",Tahoma,sans-serif;
+  --spring:cubic-bezier(.34,1.42,.64,1);--out:cubic-bezier(.16,1,.3,1);--inout:cubic-bezier(.65,0,.25,1);
+  --chartH:420px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--font);color:var(--ink);background-color:var(--paper);
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='h'><feTurbulence type='fractalNoise' baseFrequency='0.004 0.55' numOctaves='2' seed='3'/><feColorMatrix values='0 0 0 0 0.45  0 0 0 0 0.36  0 0 0 0 0.22  0 0 0 0.10 0'/></filter><filter id='v'><feTurbulence type='fractalNoise' baseFrequency='0.55 0.004' numOctaves='2' seed='9'/><feColorMatrix values='0 0 0 0 0.45  0 0 0 0 0.36  0 0 0 0 0.22  0 0 0 0.07 0'/></filter><rect width='260' height='260' filter='url(%23h)'/><rect width='260' height='260' filter='url(%23v)'/></svg>");
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;
+}
+a{color:inherit}
+button{font:inherit;color:inherit}
+img,svg{display:block}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:8px}
+section{scroll-margin-top:96px}
+
+/* ---------- shared ---------- */
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding-inline:clamp(16px,4vw,24px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 24px;border-radius:14px;
+  font-weight:800;font-size:16px;line-height:1.5;text-decoration:none;white-space:nowrap;cursor:pointer;border:1px solid transparent;
+  transition:transform .45s var(--spring),background-color .3s ease,box-shadow .3s ease,color .3s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-brick{background:var(--brick);color:var(--ink);box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 8px 20px -10px rgba(120,86,20,.55)}
+.btn-brick:hover{background:#E9BE57}
+.btn-dark{background:var(--ink);color:var(--card);box-shadow:0 10px 22px -12px rgba(41,33,26,.7)}
+.btn-dark:hover{background:#3A2E23}
+.btn-outline{background:var(--card);border-color:var(--line-2);color:var(--ink)}
+.btn-outline:hover{border-color:var(--ink-2)}
+.btn .arr{display:grid;place-items:center;width:22px;height:22px;overflow:hidden;position:relative}
+.btn .arr svg{grid-area:1/1;transition:transform .5s var(--inout)}
+.btn .arr .a2{transform:translate(120%,120%)}
+.btn:hover .arr .a1{transform:translate(-120%,-120%)}
+.btn:hover .arr .a2{transform:none}
+
+.sec-head{max-width:720px;margin:0 auto;text-align:center;display:flex;flex-direction:column;gap:12px}
+.h2{margin:0;font-weight:900;font-size:clamp(28px,4vw,40px);line-height:1.3;color:var(--ink)}
+.lead{margin:0;font-size:clamp(15px,1.5vw,17px);line-height:1.7;color:var(--body)}
+
+/* word reveal */
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:.08em .04em .18em;margin:-.08em -.04em -.18em}
+.wi{display:inline-block;transform:translate3d(0,110%,0) rotate(-3deg);transform-origin:100% 100%;
+  transition:transform 1100ms var(--out);transition-delay:calc(var(--d,0) * 1ms)}
+.in .wi{transform:none}
+.rv{opacity:0;transform:translate3d(0,16px,0);filter:blur(4px);
+  transition:opacity .9s ease,transform 1.1s var(--out),filter .9s ease;transition-delay:calc(var(--d,0) * 1ms)}
+.in .rv,.rv.in{opacity:1;transform:none;filter:none}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:40;padding:16px clamp(12px,4.4vw,64px) 0}
+.nav-bar{max-width:1312px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  background:rgba(251,248,241,.86);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);
+  border:1px solid var(--line);border-radius:18px;padding:12px 16px 12px 12px;box-shadow:0 10px 30px -18px rgba(41,33,26,.35);
+  transition:box-shadow .4s ease,transform .6s var(--out)}
+.nav.scrolled .nav-bar{box-shadow:0 14px 34px -16px rgba(41,33,26,.45)}
+.logo{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:17px;line-height:1.65;text-decoration:none;color:var(--ink);white-space:nowrap}
+.logo svg{flex:none}
+.nav-links{display:flex;gap:24px}
+.nav-links a{position:relative;font-weight:500;font-size:15px;line-height:1.65;color:#5C4A38;text-decoration:none;white-space:nowrap;transition:color .3s}
+.nav-links a::after{content:"";position:absolute;inset-inline:0;bottom:-2px;height:2px;border-radius:2px;background:var(--brick);transform:scaleX(0);transform-origin:100% 50%;transition:transform .5s var(--out)}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a:hover::after,.nav-links a.on::after{transform:scaleX(1)}
+.nav-actions{display:flex;gap:8px}
+.nav-menu{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line-2);background:var(--card);cursor:pointer;place-items:center}
+.sheet{max-width:1312px;margin:8px auto 0;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px;
+  box-shadow:0 20px 40px -20px rgba(41,33,26,.45);display:grid;gap:4px;transform-origin:50% 0;animation:sheetIn .45s var(--out)}
+.sheet[hidden]{display:none}
+.sheet a.l{padding:12px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+.sheet a.l:hover{background:var(--paper-2)}
+.sheet .row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}
+@keyframes sheetIn{from{opacity:0;transform:translateY(-6px) scale(.98)}}
+
+/* ---------- hero ---------- */
+.hero{padding:32px clamp(12px,4.4vw,64px) 56px}
+.hero-card{position:relative;isolation:isolate;overflow:hidden;max-width:1312px;margin:0 auto;display:flex;align-items:center;gap:48px;
+  padding:48px 40px;border-radius:32px;background:#F7F2E6;border:1px solid var(--line);box-shadow:0 18px 40px -30px rgba(56,36,20,.35)}
+.hero-bg{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.hero-bg .glow{position:absolute;width:900px;height:900px;margin:-450px 0 0 -450px;left:var(--gx,28%);top:var(--gy,8%);
+  background:radial-gradient(closest-side,rgba(255,243,210,.95),rgba(255,243,210,.35) 45%,rgba(255,243,210,0) 72%);
+  opacity:0;transition:opacity 1.6s ease}
+.in .hero-bg .glow{opacity:1}
+.hero-ridges{position:absolute;inset-inline:0;bottom:0;width:100%;height:78%}
+.hero-ridges g{transition:transform 1.2s var(--out)}
+.hero-ridges path{opacity:0;transform:translateY(40px);transition:opacity 1.4s ease,transform 1.8s var(--out);transition-delay:calc(var(--d,0) * 1ms)}
+.in .hero-ridges path{opacity:1;transform:none}
+.hero-bg .mist{position:absolute;inset-inline:-30%;bottom:16%;height:34%;
+  background:radial-gradient(40% 60% at 20% 60%,rgba(255,252,244,.75),transparent 70%),radial-gradient(35% 55% at 70% 40%,rgba(255,252,244,.6),transparent 70%);
+  filter:blur(6px);animation:drift 38s linear infinite alternate;opacity:.0;transition:opacity 2s ease 1.2s}
+.in .hero-bg .mist{opacity:1}
+@keyframes drift{from{transform:translateX(-8%)}to{transform:translateX(8%)}}
+
+.hero-copy{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.eyebrow{display:inline-flex;padding:4px 14px;border-radius:999px;background:#EFE6D4;font-weight:600;font-size:14px;line-height:1.65;color:#5C4A38}
+.h1{margin:0;font-weight:900;font-size:clamp(44px,6vw,72px);line-height:1.2;color:var(--ink);letter-spacing:-.01em}
+.hero-sub{margin:0;font-weight:700;font-size:clamp(22px,2.6vw,30px);line-height:1.5;color:#5C4A38}
+.acc{position:relative;display:inline-block;white-space:nowrap}
+.acc svg{position:absolute;inset-inline:-4%;bottom:-.05em;width:108%;height:.42em;z-index:-1;overflow:visible}
+.acc path{fill:none;stroke:var(--brick);stroke-width:9;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;opacity:.85;
+  transition:stroke-dashoffset 1.1s var(--inout) 1.25s}
+.in .acc path{stroke-dashoffset:0}
+.lede{margin:16px 0 0;font-size:clamp(16px,1.5vw,18px);line-height:1.7;color:var(--body)}
+.lede b{color:var(--ink);font-weight:700;white-space:nowrap}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.fact{padding:8px 14px;border-radius:12px;background:var(--card);border:1px solid var(--line);font-size:14px;line-height:1.65;color:var(--ink)}
+
+.hero-chart{flex:0 0 580px;max-width:580px;display:flex;flex-direction:column;gap:10px}
+.chart{position:relative}
+.stage{position:relative;height:var(--chartH);clip-path:inset(-80px -90px 0 -90px)}
+.horizon{position:absolute;inset-inline:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--ink-2) 18%,var(--ink-2) 82%,transparent);
+  transform:scaleX(0);opacity:.55;transition:transform .9s var(--out),opacity 1.4s ease 1.2s}
+.chart.go .horizon{transform:scaleX(1);opacity:.22}
+.cols{position:absolute;inset:0;display:flex;gap:7px;align-items:flex-end}
+.col{position:relative;flex:1 1 0;min-width:0;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px;
+  padding:0;border:0;background:none;cursor:pointer;
+  transform:translate3d(0,calc(var(--chartH) * 1.02),0);transition:transform 1150ms var(--spring);transition-delay:calc(260ms + var(--i) * 85ms)}
+.chart.go .col{transform:none}
+.chart.settled .col{transition:transform .5s var(--spring),opacity .3s ease;transition-delay:0ms}
+.col-name{font-weight:700;font-size:12px;line-height:1.4;color:#5C4A38;white-space:nowrap;text-align:center;transition:color .3s,transform .5s var(--spring)}
+.col.lv0 .col-name{white-space:normal;color:var(--muted)}
+.bar{position:relative;width:100%;height:calc(var(--chartH) * var(--r));border-radius:27px 27px 6px 6px;background:var(--c);
+  display:flex;justify-content:center;padding-top:14px;transition:filter .3s ease,box-shadow .4s ease}
+.chart[data-variant="bars"] .bar{overflow:hidden}
+.col.lv9 .bar{border:2px solid var(--ink)}
+.col.lv0 .bar{opacity:.55}
+.num{position:relative;z-index:2;font-weight:900;font-size:18px;line-height:1;color:var(--nc)}
+.snow{position:absolute;inset-inline:0;top:0;height:24%;background:#FBF8F1;transform:scaleY(0);transform-origin:50% 0;
+  clip-path:polygon(0 0,100% 0,100% 70%,86% 86%,72% 66%,56% 92%,40% 70%,24% 90%,10% 68%,0 82%);transition:transform .6s var(--spring)}
+.col.lv9:hover .snow,.col.lv9:focus-visible .snow,.col.lv9.act .snow{transform:scaleY(1)}
+.chart.settled .col:hover,.chart.settled .col.act,.chart.settled .col:focus-visible{transform:translateY(-6px)}
+.chart.settled .cols:hover .col:not(:hover):not(.act){opacity:.72}
+.col:hover .col-name,.col.act .col-name{color:var(--ink)}
+.col:focus-visible{outline:none}
+.col:focus-visible .bar{box-shadow:0 0 0 2px var(--card),0 0 0 4px var(--ink)}
+/* variant: peaks */
+.chart[data-variant="peaks"] .bar{background:none;border:0;border-radius:0}
+.chart[data-variant="peaks"] .col.lv0 .bar{opacity:1}
+.mtn{position:absolute;bottom:0;left:50%;width:240%;height:100%;transform:translateX(-50%);overflow:visible;pointer-events:none}
+.mtn .snowcap{transform-box:fill-box;transform-origin:50% 0;transition:transform .6s var(--spring)}
+.chart[data-variant="peaks"] .num{margin-top:calc(var(--chartH) * var(--r) * .34)}
+.chart[data-variant="peaks"] .col.lv0 .num{margin-top:6px}
+.chart-foot{display:flex;justify-content:space-between;gap:12px;font-size:13px;line-height:1.65;color:var(--muted)}
+.chart-hint{display:none;margin:0;font-size:12.5px;color:var(--muted);text-align:center}
+
+/* peak card */
+.peakcard{position:fixed;z-index:60;width:256px;padding:16px 18px;border-radius:20px;background:var(--card);border:1px solid var(--line);
+  box-shadow:0 16px 34px -16px rgba(56,36,20,.4);pointer-events:none;opacity:0;transform:translateY(6px) scale(.98);
+  transition:opacity .25s ease,transform .45s var(--spring);display:flex;flex-direction:column;gap:8px}
+.peakcard.show{opacity:1;transform:none}
+.peakcard .t{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.peakcard .nm{font-weight:800;font-size:16px;line-height:1.65}
+.peakcard .ht{font-weight:700;font-size:13px;color:#5C4A38;white-space:nowrap}
+.peakcard .rg{margin:0;font-size:13px;line-height:1.65;color:var(--muted)}
+.peakcard hr{border:0;height:1px;background:var(--line);margin:0}
+.peakcard .ds{margin:0;font-size:14px;line-height:1.65;color:var(--body)}
+
+/* ---------- how ---------- */
+.how{padding:88px 0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px 20px;display:flex;flex-direction:column;gap:10px;
+  transition:transform .5s var(--spring),box-shadow .4s ease,border-color .3s}
+.step:hover{transform:translateY(-4px);box-shadow:0 18px 30px -22px rgba(56,36,20,.45);border-color:var(--line-2)}
+.step .n{width:40px;height:40px;border-radius:20px;background:var(--brick);display:grid;place-items:center;font-weight:900;font-size:18px;line-height:1}
+.step h3{margin:0;font-weight:800;font-size:18px;line-height:1.5}
+.step p{margin:0;font-size:15px;line-height:1.7;color:var(--body)}
+.step p b{font-weight:700;color:var(--ink-2)}
+.trail{position:absolute;top:42px;inset-inline-start:calc(100% - 4px);width:24px;height:2px;pointer-events:none}
+
+/* ---------- peaks table ---------- */
+.peaks{padding:88px 0;background:rgba(214,193,150,.2)}
+.ptable{margin-top:40px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:6px 0;overflow:hidden}
+.prow{display:grid;grid-template-columns:minmax(0,1fr) 250px 210px 130px 130px;gap:16px;align-items:center;padding:12px 24px;border-top:1px solid var(--line)}
+.prow.head{border-top:0;padding-block:14px;font-weight:600;font-size:14px;line-height:1.5;color:var(--muted)}
+.prow .peak{display:flex;align-items:center;gap:12px}
+.prow .meta{font-size:13px;line-height:1.5;color:var(--muted);white-space:nowrap}
+.prow .v{font-size:15.5px;line-height:1.5;color:var(--body)}
+.prow .p{font-weight:800;font-size:17px;line-height:1.5}
+.prow{transition:background-color .3s ease}
+.prow:not(.head):hover{background:rgba(226,180,74,.08)}
+.chip{display:inline-flex;align-items:center;gap:8px;width:118px;padding:6px 6px 6px 8px;border-radius:999px;background:var(--brick);border:0;cursor:pointer;
+  font-weight:700;font-size:13.5px;line-height:1.5;color:var(--ink);text-align:right;transition:transform .45s var(--spring),box-shadow .3s}
+.chip:hover,.chip:focus-visible{transform:translateX(-4px);box-shadow:0 8px 16px -10px rgba(120,86,20,.6)}
+.chip .b{flex:none;width:24px;height:24px;border-radius:12px;background:var(--card);display:grid;place-items:center;font-weight:900;font-size:13px;line-height:1}
+.chip span:last-child{flex:1}
+.chip.zero{background:#B9B1A4}
+.foot-note{margin:40px 0 0;text-align:center;font-size:14px;line-height:1.65;color:var(--muted)}
+
+/* ---------- calculator ---------- */
+.calc{padding:88px 0;background:var(--night);color:var(--night-text);position:relative;overflow:hidden}
+.calc .h2{color:var(--night-text)}
+.calc .lead{color:#D9CCB8}
+.calc-body{display:grid;grid-template-columns:minmax(0,1fr) 500px;gap:24px;margin-top:40px;align-items:start}
+.panel{background:var(--night-2);border:1px solid var(--night-3);border-radius:22px;padding:26px}
+.ladder-title{margin:0 0 12px;font-weight:700;font-size:16px;line-height:1.65}
+.ladder-title .pk{display:inline-block;color:var(--brick);transition:opacity .25s ease,transform .45s var(--spring)}
+.ladder-title .pk.swap{opacity:0;transform:translateY(6px)}
+.ladder{position:relative;display:flex;flex-direction:column;gap:6px;padding-inline-start:30px}
+.rung{position:relative;height:34px;display:flex;align-items:center;justify-content:flex-start;gap:8px;padding:0 12px;border-radius:8px;
+  background:var(--rb);color:var(--night-muted);border:2px solid transparent;transition:background-color .35s ease,color .35s ease,border-color .35s ease,transform .45s var(--spring)}
+.rung .nm{font-weight:700;font-size:13.5px;line-height:1.3;white-space:nowrap}
+.rung .rg{margin-inline-start:auto;display:flex;gap:6px;align-items:center;font-size:12.5px;line-height:1.3;white-space:nowrap;overflow:hidden}
+.rung .rg i{font-style:normal;opacity:.55}
+.rung.cur{background:var(--brick);color:var(--ink);border-color:var(--night-text);font-weight:700;transform:scale(1.015)}
+.rung .dots{display:flex;gap:3px;flex:none}
+.dot{width:9px;height:9px;border-radius:5px;opacity:0;transform:scale(.3);transition:opacity .3s ease,transform .45s var(--spring)}
+.dot.s{background:var(--brick)}
+.dot.q{background:#B59A72}
+.rung.has-s .dot.s,.rung.has-q .dot.q{opacity:1;transform:none}
+.legend{display:flex;gap:16px;margin-top:14px;font-size:12.5px;color:var(--night-muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend .dot{opacity:1;transform:none}
+.flag{position:absolute;inset-inline-start:-6px;top:0;width:22px;height:30px;color:var(--brick);transition:transform .7s var(--spring);pointer-events:none}
+.flag path.cloth{transform-origin:4px 6px;animation:wave 2.6s ease-in-out infinite}
+@keyframes wave{50%{transform:skewY(-6deg) scaleX(.94)}}
+.side{display:flex;flex-direction:column;gap:24px}
+.ctrl{display:flex;flex-direction:column;gap:6px}
+.ctrl+.ctrl{margin-top:22px}
+.ctrl .hd{display:flex;justify-content:space-between;align-items:center;line-height:1.65}
+.ctrl .hd label{font-weight:700;font-size:16px}
+.ctrl .hd output{font-weight:800;font-size:18px;color:var(--brick);font-variant-numeric:tabular-nums}
+.ctrl .rgx{display:flex;justify-content:space-between;font-size:12.5px;line-height:1.65;color:var(--night-muted)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:transparent;margin:0;cursor:pointer;direction:rtl}
+input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:3px;background:linear-gradient(to left,var(--brick) 0 var(--p,50%),var(--night-3) var(--p,50%) 100%)}
+input[type=range]::-moz-range-track{height:6px;border-radius:3px;background:var(--night-3)}
+input[type=range]::-moz-range-progress{height:6px;border-radius:3px;background:var(--brick)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;margin-top:-8px;border-radius:11px;background:var(--brick);border:2px solid var(--night);
+  box-shadow:0 0 0 0 rgba(226,180,74,.35);transition:box-shadow .3s ease,transform .3s var(--spring)}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:11px;background:var(--brick);border:2px solid var(--night)}
+input[type=range]:hover::-webkit-slider-thumb{box-shadow:0 0 0 8px rgba(226,180,74,.16)}
+input[type=range]:active::-webkit-slider-thumb{transform:scale(1.12);box-shadow:0 0 0 10px rgba(226,180,74,.22)}
+input[type=range]:focus-visible{outline:none}
+input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(--night),0 0 0 5px var(--brick)}
+.next{display:flex;flex-direction:column;gap:22px}
+.next h3{margin:0;font-weight:700;font-size:16px;line-height:1.65}
+.next .big{margin:0;font-weight:700;font-size:clamp(20px,2.2vw,24px);line-height:1.5;text-align:center}
+.next .big b{color:var(--brick);font-weight:800}
+.next .sm{display:block;margin-top:4px;font-weight:400;font-size:13.5px;color:var(--night-muted)}
+.next .and{display:block;font-size:13px;font-weight:500;color:var(--night-muted);margin:4px 0}
+.next.top .big{color:var(--brick)}
+.fade-swap{transition:opacity .25s ease,transform .45s var(--out)}
+.fade-swap.out{opacity:0;transform:translateY(6px)}
+
+/* ---------- criteria ---------- */
+.crit{padding:88px 0}
+.cards2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.ccard{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.ccard .hd{display:flex;align-items:center;gap:12px}
+.ccard .hd i{width:14px;height:14px;border-radius:7px;flex:none}
+.ccard h3{margin:0;font-weight:800;font-size:22px;line-height:1.4}
+.ccard p{margin:0;font-size:16px;line-height:1.7;color:var(--body)}
+.ccard p b{color:var(--ink);font-weight:700}
+.note{background:#F3EDE0;border-radius:12px;padding:10px 14px;font-size:15px;line-height:1.7;color:var(--ink)}
+.zero-rule{margin-top:20px;display:flex;align-items:center;gap:20px;padding:22px 26px;border-radius:22px;background:rgba(214,193,150,.28);border:1px dashed var(--line-2)}
+.zero-rule .cp{flex:1}
+.zero-rule h3{margin:0 0 4px;font-weight:800;font-size:19px;line-height:1.5}
+.zero-rule p{margin:0;font-size:15.5px;line-height:1.7;color:var(--body)}
+
+/* ---------- rates ---------- */
+.rates{padding:88px 0}
+.rates-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.rates-head .ttl{display:flex;flex-direction:column;gap:10px}
+.tabs{position:relative;display:flex;gap:4px;padding:4px;border-radius:14px;background:#EEE6D6}
+.tab{position:relative;z-index:1;padding:12px 20px;border:0;background:none;border-radius:10px;font-weight:700;font-size:16px;line-height:1.2;cursor:pointer;transition:color .35s ease}
+.tab[aria-selected="true"]{color:var(--card)}
+.tabs .pill{position:absolute;z-index:0;top:4px;bottom:4px;border-radius:10px;background:var(--ink);transition:inset-inline-start .5s var(--spring),width .5s var(--spring)}
+.legend2{display:flex;gap:14px;align-items:center;font-size:13px;color:var(--muted);margin-top:16px}
+.legend2 b{color:var(--ink);font-weight:800}
+.rt-scroll{margin-top:24px;overflow-x:auto;border-radius:22px;border:1px solid var(--line);background:var(--card);-webkit-overflow-scrolling:touch}
+.rt{display:grid;grid-template-columns:190px repeat(10,minmax(86px,1fr));min-width:1050px}
+.rt .c{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:12px 4px;border-top:1px solid var(--line);
+  transition:background-color .35s ease}
+.rt .c.lbl{align-items:flex-start;padding-inline:24px;position:sticky;inset-inline-start:0;background:var(--card);z-index:2;font-weight:700;font-size:16px;line-height:1.6}
+.rt .hdr{border:0;border-top:0;background:transparent;font:inherit;color:inherit;padding-block:12px 10px;cursor:pointer}
+.rt .hdr .bx{width:30px;height:30px;border-radius:9px;background:#EFE6D4;display:grid;place-items:center;font-weight:900;font-size:14px;transition:background-color .3s,transform .45s var(--spring)}
+.rt .hdr .nm{font-weight:600;font-size:13px;line-height:1.3;color:var(--muted);margin-top:4px;white-space:nowrap}
+.rt .hdr:hover .bx{transform:translateY(-2px)}
+.rt .lbl.hdr{cursor:default;font-weight:600;font-size:14px;color:var(--muted)}
+.rt .cash{font-weight:800;font-size:17px;line-height:1.4;color:var(--ink)}
+.rt .inst{font-size:13px;line-height:1.4;color:var(--muted)}
+.rt .base{font-weight:700;font-size:15px;color:var(--muted)}
+.rt .c.hl{background:rgba(226,180,74,.22)}
+.rt .hdr.hl .bx{background:var(--brick)}
+.rt .hdr.hl .nm{color:var(--ink)}
+.soon{margin-top:24px;display:flex;align-items:center;gap:24px;padding:36px 32px;border-radius:22px;background:var(--card);border:1px solid var(--line)}
+.soon h3{margin:0 0 6px;font-weight:900;font-size:24px;line-height:1.4}
+.soon p{margin:0;font-size:16px;line-height:1.7;color:var(--body)}
+.soon svg{flex:none}
+.soon .trailp{stroke-dasharray:4 6;animation:march 1.6s linear infinite}
+@keyframes march{to{stroke-dashoffset:-20}}
+.panelx[hidden]{display:none}
+.panelx{animation:panelIn .5s var(--out)}
+@keyframes panelIn{from{opacity:0;transform:translateY(8px)}}
+
+/* ---------- faq ---------- */
+.faq{padding:120px 0 88px}
+.faq-list{max-width:860px;margin:28px auto 0;display:flex;flex-direction:column;gap:10px}
+.qa{background:var(--card);border:1px solid var(--line);border-radius:16px;transition:border-color .3s ease,box-shadow .4s ease}
+.qa.open{border-color:var(--line-2);box-shadow:0 14px 28px -24px rgba(56,36,20,.5)}
+.qa button{width:100%;display:flex;align-items:center;gap:12px;padding:18px 20px;border:0;background:none;cursor:pointer;text-align:right;
+  font-weight:700;font-size:16.5px;line-height:1.5}
+.qa button span{flex:1}
+.qa .chev{flex:none;transition:transform .5s var(--spring)}
+.qa.open .chev{transform:rotate(180deg)}
+.qa .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--out)}
+.qa.open .ans{grid-template-rows:1fr}
+.qa .ans>div{overflow:hidden}
+.qa .ans p{margin:0;padding:0 20px 18px;font-size:15.5px;line-height:1.7;color:var(--body);opacity:0;transform:translateY(-4px);transition:opacity .4s ease,transform .5s var(--out)}
+.qa.open .ans p{opacity:1;transform:none;transition-delay:.08s}
+
+/* ---------- cta arch ---------- */
+.cta{padding:24px 0 0;position:relative}
+.cta-row{display:flex;align-items:center;justify-content:center;gap:0}
+.niche-wrap{flex:0 0 512px;max-width:512px;padding:0 0 0}
+.arch{position:relative;width:100%;aspect-ratio:512/480;border-radius:min(198px,38vw) min(198px,38vw) 6px 6px;overflow:hidden;background:#EDE3CF;
+  box-shadow:inset 0 18px 40px -14px rgba(60,40,20,.45),inset 0 0 0 10px #E9DDC6,inset 0 0 0 11px rgba(120,96,64,.18)}
+.arch canvas{position:absolute;inset:11px 11px 0;width:calc(100% - 22px);height:calc(100% - 11px);border-radius:min(188px,36vw) min(188px,36vw) 0 0;display:block}
+.arch::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  box-shadow:inset 0 22px 30px -18px rgba(40,28,16,.5),inset 14px 0 24px -18px rgba(40,28,16,.4),inset -14px 0 24px -18px rgba(40,28,16,.4)}
+.sill{height:14px;margin:0 -8px;border-radius:4px;background:linear-gradient(#E9DDC6,#D9CBB0);box-shadow:0 10px 18px -12px rgba(60,40,20,.5)}
+.niche{flex:0 0 512px;max-width:512px;display:flex;flex-direction:column;align-items:center;gap:10px;padding:36px 48px;text-align:center}
+.niche h2{margin:0;font-weight:900;font-size:clamp(24px,2.6vw,28px);line-height:1.35;color:#5C4A38}
+.niche p{margin:0 0 6px;font-size:14.5px;line-height:1.7;color:#5C4A38}
+.niche .btn{width:100%}
+
+/* ---------- footer ---------- */
+.foot{position:relative;margin-top:-1px;color:var(--night-text)}
+.ridges{position:relative;height:clamp(150px,18vw,240px);overflow:hidden;margin-top:24px}
+.ridges svg{position:absolute;left:50%;bottom:-1px;width:max(100%,1100px);height:100%;transform:translateX(-50%)}
+.ridges g{transform:translateY(calc((1 - var(--k,1)) * var(--dy,0px)));will-change:transform}
+.foot-body{position:relative;background:var(--ground);padding:clamp(28px,4vw,48px) 0 26px;overflow:hidden}
+.botany{position:absolute;left:50%;bottom:0;width:max(100%,1100px);height:92%;transform:translateX(-50%);color:var(--night-text);opacity:.09;pointer-events:none}
+.stem{transform-box:view-box;animation:sway 9s ease-in-out infinite alternate;animation-delay:calc(var(--sd,0) * -1s)}
+@keyframes sway{from{transform:rotate(-.9deg)}to{transform:rotate(1.1deg)}}
+.draw{fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;
+  transition:stroke-dashoffset 2400ms cubic-bezier(.45,0,.2,1);transition-delay:calc(var(--d,0) * 1ms)}
+.botany .draw{vector-effect:non-scaling-stroke;stroke-width:1.15}
+.in .draw{stroke-dashoffset:0}
+.foot-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.9fr);gap:48px}
+.foot .logo{color:var(--night-text);font-size:19px}
+.foot .tag{margin:14px 0 0;font-size:13.5px;line-height:1.6;color:var(--night-muted);max-width:32ch}
+.foot nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 24px}
+.foot h4{margin:0 0 14px;font-weight:600;font-size:13px;color:var(--night-text)}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.foot li a{position:relative;display:inline-flex;font-size:13.5px;color:var(--night-muted);text-decoration:none;transition:color .35s ease,transform .5s var(--out)}
+.foot li a::before{content:"";position:absolute;inset-inline-start:-13px;top:50%;width:6px;height:6px;margin-top:-3px;border-radius:0 6px;background:var(--brick);opacity:0;transform:scale(.2) rotate(45deg);transition:opacity .3s ease,transform .5s var(--out)}
+.foot li a:hover{color:var(--night-text);transform:translateX(-8px)}
+.foot li a:hover::before{opacity:1;transform:none}
+.foot-bottom{position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;margin-top:clamp(40px,7vw,90px);padding-top:22px;font-size:13px;color:var(--night-muted)}
+.foot-bottom p{margin:0}
+.rule{position:absolute;top:0;inset-inline:0;height:1px;background:rgba(243,238,227,.14);transform:scaleX(0);transform-origin:100% 50%;transition:transform 1.8s var(--inout) .9s}
+.in .rule{transform:none}
+.mark .draw{stroke-width:1.3}
+
+/* ---------- comparison switch ---------- */
+.switch{position:fixed;z-index:70;bottom:16px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;padding:6px 6px 6px 14px;
+  border-radius:999px;background:rgba(251,248,241,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line-2);
+  box-shadow:0 18px 36px -18px rgba(41,33,26,.55);font-size:13px;white-space:nowrap}
+.switch .lb{font-weight:700;color:var(--ink-2);padding-inline-start:8px}
+.seg{position:relative;display:flex;gap:2px;padding:3px;border-radius:999px;background:#EEE6D6}
+.seg button{position:relative;z-index:1;border:0;background:none;padding:7px 14px;border-radius:999px;font-weight:700;font-size:13px;cursor:pointer;transition:color .3s}
+.seg button[aria-pressed="true"]{color:var(--card)}
+.seg .pill{position:absolute;top:3px;bottom:3px;border-radius:999px;background:var(--ink);transition:inset-inline-start .5s var(--spring),width .5s var(--spring)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1180px){
+  .hero-card{flex-direction:column;align-items:stretch;gap:40px;padding:40px 32px}
+  .hero-chart{flex:none;max-width:none;width:100%}
+  .calc-body{grid-template-columns:1fr}
+  .cta-row{flex-direction:column}
+  .niche-wrap{order:-1}
+  .niche{padding:28px 16px 8px}
+}
+@media (max-width:980px){
+  .nav-links,.nav-actions{display:none}
+  .nav-menu{display:grid}
+  .steps{grid-template-columns:1fr 1fr}
+  .prow{grid-template-columns:1fr 1fr;gap:6px 16px;padding:16px 20px}
+  .prow.head{display:none}
+  .prow .peak{grid-column:1/-1;flex-wrap:wrap;margin-bottom:6px}
+  .prow .v,.prow .p{display:flex;flex-direction:column;font-size:15px}
+  .prow [data-k]::before{content:attr(data-k);font-weight:500;font-size:12px;color:var(--muted)}
+  .cards2{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:720px){
+  :root{--chartH:300px}
+  .hero{padding:20px 10px 40px}
+  .hero-card{padding:28px 18px;border-radius:24px}
+  .cols{gap:4px}
+  .col-name{font-size:10px}
+  .bar{border-radius:18px 18px 5px 5px;padding-top:9px}
+  .num{font-size:14px}
+  .facts{margin-top:24px}
+  .chart-foot{font-size:11.5px}
+  .steps{grid-template-columns:1fr}
+  .zero-rule{flex-direction:column;align-items:flex-start}
+  .soon{flex-direction:column;align-items:flex-start;padding:28px 22px}
+  .niche-wrap{flex:none;width:100%}
+  .niche{flex:none;width:100%}
+  .foot nav{grid-template-columns:1fr 1fr}
+  .switch{bottom:10px;padding:5px 5px 5px 10px}
+  .switch .lb{display:none}
+  .how,.peaks,.calc,.crit,.rates{padding:64px 0}
+  .faq{padding:72px 0 64px}
+  .panel{padding:18px}
+  .ladder{padding-inline-start:24px}
+  .rung .rg i,.rung .rg .sc{display:none}
+}
+@media (max-width:520px){
+  :root{--chartH:250px}
+  .col-name{display:none}
+  .col.lv0 .col-name{display:none}
+  .chart-hint{display:block}
+  .chart-foot{flex-direction:column;gap:2px}
+  .ctas .btn{flex:1 1 140px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .wi,.rv,.col,.horizon,.acc path,.draw,.rule,.hero-ridges path{transition:none!important}
+  .hero-bg .mist,.stem,.flag path.cloth,.soon .trailp{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="nav-bar">
+    <a class="logo" href="#top" aria-label="شرکای بیمه‌بازار">
+      <svg width="26" height="22" viewBox="0 0 26 22" aria-hidden="true"><path d="M1 21 9.5 6l4 6 3-4.5L25 21Z" fill="var(--brick)"/><path d="M9.5 6 7.6 9.4l1.9-.9 1.6 1.4Z" fill="#FBF8F1"/></svg>
+      شرکای بیمه‌بازار
+    </a>
+    <nav class="nav-links" aria-label="بخش‌های صفحه">
+      <a href="#how">چطور کار می‌کند</a>
+      <a href="#peaks">قله‌ها</a>
+      <a href="#calc">محاسبه‌گر</a>
+      <a href="#rates">کارمزدها</a>
+      <a href="#faq">سوالات</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-outline" href="#calc">محاسبه ارتفاع!</a>
+      <a class="btn btn-brick" href="https://shoraka.net">ثبت‌نام در شرکا</a>
+    </div>
+    <button class="nav-menu" type="button" aria-expanded="false" aria-controls="sheet" aria-label="منو">
+      <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="sheet" id="sheet" hidden>
+    <a class="l" href="#how">چطور کار می‌کند</a>
+    <a class="l" href="#peaks">قله‌ها</a>
+    <a class="l" href="#calc">محاسبه‌گر</a>
+    <a class="l" href="#rates">کارمزدها</a>
+    <a class="l" href="#faq">سوالات</a>
+    <div class="row">
+      <a class="btn btn-outline" href="#calc">محاسبه ارتفاع!</a>
+      <a class="btn btn-brick" href="https://shoraka.net">ثبت‌نام در شرکا</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="hero-card">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="glow"></div>
+      <svg class="hero-ridges" viewBox="0 0 1400 520" preserveAspectRatio="xMidYMax slice"></svg>
+      <div class="mist"></div>
+    </div>
+
+    <div class="hero-copy">
+      <span class="eyebrow rv" style="--d:150">طرح کارمزد عملکردی شرکای بیمه‌بازار</span>
+      <h1 class="h1" id="hero-title" data-split="300">قله‌های شرکا</h1>
+      <p class="hero-sub" data-split="620">هر قله بالاتر، <span class="acc">کارمزد بیشتر<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M98 6C70 3 34 3 2 7"/></svg></span></p>
+      <p class="lede rv" style="--d:1000">بر اساس عملکرد آخرین ماه، روی یکی از ۹ قله قرار می‌گیرید و <b>تا <span data-count="40">۴۰</span>٪ کارمزد نقدی</b> و <b>تا <span data-count="21">۲۱</span>٪ کارمزد قسطی</b> می‌گیرید.</p>
+      <div class="ctas rv" style="--d:1150">
+        <a class="btn btn-dark" href="https://shoraka.net">ثبت‌نام در شرکا
+          <span class="arr" aria-hidden="true"><svg class="a1" width="14" height="14" viewBox="0 0 16 16"><path d="M11.5 11.5l-7-7M10.5 4.5h-6v6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="a2" width="14" height="14" viewBox="0 0 16 16"><path d="M11.5 11.5l-7-7M10.5 4.5h-6v6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="btn btn-outline" href="#calc">محاسبه ارتفاع!</a>
+      </div>
+      <div class="facts">
+        <span class="fact rv" style="--d:1300">۹ پله از الوند تا دماوند</span>
+        <span class="fact rv" style="--d:1380">بر اساس میزان فروش و امتیاز خوش‌حسابی</span>
+        <span class="fact rv" style="--d:1460">ماهانه به‌روز می‌شود</span>
+      </div>
+    </div>
+
+    <div class="hero-chart">
+      <div class="chart" id="chart" data-variant="bars"></div>
+      <p class="chart-hint rv" style="--d:1600">برای دیدن نام و ارتفاع هر قله، روی آن بزنید.</p>
+      <div class="chart-foot rv" style="--d:1500">
+        <span>نقطه شروع: جشنواره متوقف و دریافت کارمزد پایه</span>
+        <span>هر ماه حداکثر یک پله ←</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how sec" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2" id="how-title" data-split="0">از این‌جا تا دماوند</h2>
+      <p class="lead rv" style="--d:250">چهار قدم ساده که پله و کارمزد شما را تعیین می‌کند.</p>
+    </div>
+    <div class="steps">
+      <article class="step rv" style="--d:350"><span class="n">۱</span><h3>ارزیابی اولیه</h3><p>رده‌بندی اولیه هر شریک، بر اساس بهترین عملکرد سه ماه گذشته محاسبه می‌شود.</p></article>
+      <article class="step rv" style="--d:450"><span class="n">۲</span><h3>دو سنجه در هر ماه</h3><p>هر ماه فروش و امتیاز خوش‌حسابی شما به صورت مجزا بررسی می‌شود و بر اساس آن صعود یا کاهش ارتفاع خواهد داشت.</p></article>
+      <article class="step rv" style="--d:550"><span class="n">۳</span><h3>ماهی یک قله</h3><p>جابه‌جایی تدریجی است. در هر ماه حداکثر یک پله بالا یا پایین می‌روید، پس ثبات عملکرد اهمیت دارد.</p></article>
+      <article class="step rv" style="--d:650"><span class="n">۴</span><h3>کارمزد خود را بگیرید</h3><p>کارمزدهای جشنواره بر اساس پله شما تعیین می‌شود: <b>تا ۴۰٪ در فروش نقدی</b> و تا <b>۲۱٪ در فروش قسطی</b>.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="peaks sec" id="peaks" aria-labelledby="peaks-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2" id="peaks-title" data-split="0">نُه قله، از الوند تا دماوند</h2>
+      <p class="lead rv" style="--d:250">برای رسیدن به هر پله، هر دو شرط آن باید برقرار باشد. نشانگر را روی نام هر قله ببرید تا با آن آشنا شوید.</p>
+    </div>
+    <div class="ptable" id="ptable" role="table" aria-label="شرایط و کارمزد هر قله"></div>
+    <p class="foot-note rv" style="--d:300">نرخ‌های کارمزد این جدول برای شرکت‌های بیمه درجه ۱ است.</p>
+  </div>
+</section>
+
+<section class="calc sec" id="calc" aria-labelledby="calc-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2" id="calc-title" data-split="0">روی کدام قله‌ ایستاده‌ام؟</h2>
+      <p class="lead rv" style="--d:250">فروش و امتیاز خوش‌حسابی را تغییر دهید تا ببینید شایسته کدام قله هستید.</p>
+    </div>
+    <div class="calc-body">
+      <div class="panel rv" style="--d:350">
+        <p class="ladder-title" aria-live="polite">با این نتایج، شما بر قله <span class="pk" id="pkName">شاه‌البرز</span> می‌ایستید.</p>
+        <div class="ladder" id="ladder">
+          <svg class="flag" id="flag" viewBox="0 0 22 30" aria-hidden="true"><path d="M4 2v27" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path class="cloth" d="M5 3h13l-3.2 4.5L18 12H5Z" fill="currentColor"/></svg>
+        </div>
+        <div class="legend"><span><i class="dot s"></i>پله فروش</span><span><i class="dot q"></i>پله خوش‌حسابی</span></div>
+      </div>
+      <div class="side">
+        <div class="panel rv" style="--d:450">
+          <div class="ctrl">
+            <div class="hd"><label for="sales">فروش ماهانه</label><output id="salesOut" for="sales">۱٫۲ میلیارد تومان</output></div>
+            <input id="sales" type="range" min="0" max="1000" step="1" value="632" aria-describedby="salesRange">
+            <div class="rgx" id="salesRange"><span>صفر</span><span>۳ میلیارد تومان</span></div>
+          </div>
+          <div class="ctrl">
+            <div class="hd"><label for="score">امتیاز خوش‌حسابی</label><output id="scoreOut" for="score">۹۲</output></div>
+            <input id="score" type="range" min="84" max="100" step="1" value="92" aria-describedby="scoreRange">
+            <div class="rgx" id="scoreRange"><span>۸۴</span><span>۱۰۰</span></div>
+          </div>
+        </div>
+        <div class="panel next rv" style="--d:550" id="next" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="crit sec" id="criteria" aria-labelledby="crit-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2" id="crit-title" data-split="0">چطور صعود کنم؟</h2>
+      <p class="lead rv" style="--d:250">دو معیار، کنار هم. هر کدام ضعیف‌تر باشد، سطح شما را مشخص می‌کند.</p>
+    </div>
+    <div class="cards2">
+      <article class="ccard rv" style="--d:350">
+        <div class="hd"><i style="background:var(--brick)"></i><h3>فروش ماهانه</h3></div>
+        <p>مجموع فروش قسطی و نقدی بیمه‌های خودرویی <b>(ثالث)</b> در آخرین ماه شمسی. هرچه فروش بیشتر، امتیاز فروش بالاتر.</p>
+        <div class="note">برای امتیاز دماوند: فروش <b>۲ میلیارد تومان</b> و بیشتر در ماه</div>
+      </article>
+      <article class="ccard rv" style="--d:450">
+        <div class="hd"><i style="background:#6E4A2D"></i><h3>امتیاز خوش‌حسابی</h3></div>
+        <p>مبلغ اقساطی که بین ۲۰ام هر ماه تا ۲۰ام ماه بعد سررسید شده‌اند و <b>تا پایان ماه پرداخت نشده‌اند</b>، تقسیم بر مبلغ کل فروش ماه شمسی قبل.</p>
+        <div class="note">امتیاز خوش‌حسابی = ۱۰۰ منهای درصد اقساط پرداخت‌نشده به فروش ماه قبل</div>
+      </article>
+    </div>
+    <div class="zero-rule rv" style="--d:550">
+      <div class="cp">
+        <h3>قانون نقطه شروع</h3>
+        <p>در صورتی که اقساط معوق شما از حد مجاز عبور کند، جشنواره شما متوقف شده و فقط کارمزد پایه را دریافت می‌کنید.</p>
+      </div>
+      <button class="chip zero" type="button" data-l="0"><span class="b">۰</span><span>نقطه شروع</span></button>
+    </div>
+  </div>
+</section>
+
+<section class="rates sec" id="rates" aria-labelledby="rates-title">
+  <div class="wrap">
+    <div class="rates-head">
+      <div class="ttl">
+        <h2 class="h2" id="rates-title" data-split="0">جزئیات کارمزد هر قله</h2>
+        <p class="lead rv" style="--d:250">نرخ کل کارمزد برای سه گروه شرکت‌های بیمه. روی هر قله بزنید تا ستونش برجسته شود.</p>
+      </div>
+      <div class="tabs rv" style="--d:300" role="tablist" aria-label="نوع بیمه">
+        <span class="pill" aria-hidden="true"></span>
+        <button class="tab" role="tab" id="tab-tp" aria-selected="true" aria-controls="pn-tp">ثالث</button>
+        <button class="tab" role="tab" id="tab-ot" aria-selected="false" aria-controls="pn-ot" tabindex="-1">سایر بیمه‌ها</button>
+      </div>
+    </div>
+    <div id="pn-tp" class="panelx" role="tabpanel" aria-labelledby="tab-tp">
+      <div class="legend2 rv" style="--d:350"><span>در هر خانه: <b>نقدی</b> بالا، قسطی پایین</span></div>
+      <div class="rt-scroll rv" style="--d:400"><div class="rt" id="rt"></div></div>
+    </div>
+    <div id="pn-ot" class="panelx" role="tabpanel" aria-labelledby="tab-ot" hidden>
+      <div class="soon">
+        <svg width="120" height="84" viewBox="0 0 120 84" aria-hidden="true">
+          <path d="M4 80 38 26l14 20 12-16 52 50Z" fill="#EDE3CF"/>
+          <path d="M38 26 32 36l6-3 5 4Z" fill="#FBF8F1"/>
+          <path class="trailp" d="M12 76c14-6 22-14 30-24s16-10 22-16" fill="none" stroke="var(--ink-2)" stroke-width="2" stroke-linecap="round"/>
+          <path d="M64 36V18" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><path d="M65 18h12l-3 4 3 4H65Z" fill="var(--brick)"/>
+        </svg>
+        <div>
+          <h3>به‌زودی اعلام می‌شود</h3>
+          <p>نرخ کارمزد سایر بیمه‌ها در حال محاسبه است و به‌زودی همین‌جا منتشر می‌شود.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq sec" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="h2" id="faq-title" data-split="0">سوالات پرتکرار</h2></div>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
+<section class="cta sec" id="cta" aria-labelledby="cta-title">
+  <div class="wrap">
+    <div class="cta-row">
+      <div class="niche">
+        <h2 id="cta-title" data-split="250">اولین قله را همین ماه فتح کنید</h2>
+        <p class="rv" style="--d:600">فروش بیشتر، اقساط به‌موقع، کارمزد بالاتر.</p>
+        <a class="btn btn-brick rv" style="--d:750" href="https://shoraka.net">ثبت‌نام در شرکا</a>
+        <a class="btn btn-outline rv" style="--d:850" href="#calc">محاسبه ارتفاع</a>
+      </div>
+      <div class="niche-wrap rv" style="--d:100">
+        <div class="arch" id="arch"><canvas id="scene" aria-hidden="true"></canvas></div>
+        <div class="sill"></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot sec" id="foot">
+  <div class="ridges" aria-hidden="true"><svg id="footRidges" viewBox="0 0 1440 240" preserveAspectRatio="xMidYMax slice"></svg></div>
+  <div class="foot-body">
+    <svg class="botany" id="botany" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMax meet" aria-hidden="true"></svg>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <a class="logo rv" style="--d:300" href="#top">
+            <svg class="mark" width="30" height="26" viewBox="0 0 30 26" aria-hidden="true">
+              <path class="draw" pathLength="1" style="--d:500" d="M1.5 24.5 11 7l4.5 6.5 3.5-5 9.5 16Z"/>
+              <path class="draw" pathLength="1" style="--d:900" d="M8.6 11.4 11 10l1.6 1.8 1.2-1"/>
+              <path class="draw" pathLength="1" style="--d:1100" d="M1 24.5h28"/>
+            </svg>
+            شرکای بیمه‌بازار
+          </a>
+          <p class="tag rv" style="--d:420">پله‌پله تا دماوند، با فروش بیشتر و اقساط به‌موقع.</p>
+        </div>
+        <nav aria-label="پیوندهای پایین صفحه">
+          <div class="rv" style="--d:450"><h4>طرح</h4><ul><li><a href="#how">چطور کار می‌کند</a></li><li><a href="#peaks">قله‌ها</a></li><li><a href="#criteria">چطور صعود کنم</a></li></ul></div>
+          <div class="rv" style="--d:540"><h4>ابزارها</h4><ul><li><a href="#calc">محاسبه‌گر</a></li><li><a href="#rates">کارمزدها</a></li></ul></div>
+          <div class="rv" style="--d:630"><h4>پشتیبانی</h4><ul><li><a href="#faq">سوالات</a></li><li><a href="https://shoraka.net">ثبت‌نام در شرکا</a></li></ul></div>
+        </nav>
+      </div>
+      <div class="foot-bottom">
+        <span class="rule" aria-hidden="true"></span>
+        <p class="rv" style="--d:1100">تمامی حقوق مادی و معنوی این سایت متعلق به شرکای بیمه‌بازار است.</p>
+        <p class="rv" style="--d:1200">تحت نظارت بیمه مرکزی</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="switch" role="group" aria-label="مقایسه دو حالت هیرو">
+  <span class="lb">حالت هیرو</span>
+  <div class="seg" id="seg">
+    <span class="pill" aria-hidden="true"></span>
+    <button type="button" data-v="bars" aria-pressed="true">ستون‌ها</button>
+    <button type="button" data-v="peaks" aria-pressed="false">قله‌ها</button>
+  </div>
+</div>
+
+<div class="peakcard" id="peakcard" role="tooltip" aria-hidden="true">
+  <div class="t"><span class="nm"></span><span class="ht"></span></div>
+  <p class="rg"></p><hr><p class="ds"></p>
+</div>
+
+<script>
+(() => {
+"use strict";
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const FA = "۰۱۲۳۴۵۶۷۸۹";
+const fa = (v) => String(v).replace(/\d/g, (d) => FA[d]).replace(/\./g, "٫").replace(/,/g, "٬");
+
+// ---------- data ----------
+const PEAKS = [
+  { l: 0, name: "نقطه شروع", h: 0, region: "پیش از نخستین قله", desc: "جشنواره متوقف است و فقط کارمزد پایه دریافت می‌کنید." },
+  { l: 1, name: "الوند", h: 3580, prov: "همدان", region: "جنوب همدان، استان همدان", desc: "کوه نامدار همدان که کتیبه‌های گنج‌نامه در دامنه آن است." },
+  { l: 2, name: "سهند", h: 3707, prov: "آذربایجان شرقی", region: "جنوب تبریز، استان آذربایجان شرقی", desc: "آتشفشانی خاموش با چمنزارهای پهناور و چشمه‌های فراوان." },
+  { l: 3, name: "توچال", h: 3964, prov: "تهران", region: "البرز مرکزی، شمال تهران", desc: "قله‌ای که از بیشتر نقاط تهران دیده می‌شود." },
+  { l: 4, name: "شیرکوه", h: 4075, prov: "یزد", region: "جنوب غربی یزد، استان یزد", desc: "بلندترین قله استان یزد؛ کوهستانی خنک در دل کویر." },
+  { l: 5, name: "شاه‌البرز", h: 4170, prov: "البرز و قزوین", region: "البرز مرکزی، منطقه الموت", desc: "قله‌ای بر خط‌الرأس البرز که نام این رشته‌کوه را بر خود دارد." },
+  { l: 6, name: "دنا", h: 4412, prov: "کهگیلویه و بویراحمد", region: "زاگرس، استان کهگیلویه و بویراحمد", desc: "از بلندترین قله‌های زاگرس، با جنگل‌های بلوط در دامنه‌ها." },
+  { l: 7, name: "هزار", h: 4501, prov: "کرمان", region: "کوهستان مرکزی، استان کرمان", desc: "بلندترین قله استان کرمان با دامنه‌هایی که تا بهار برف دارند." },
+  { l: 8, name: "سبلان", h: 4811, prov: "اردبیل", region: "شمال غرب ایران، استان اردبیل", desc: "آتشفشانی خاموش با دریاچه‌ای کوچک بر فراز قله." },
+  { l: 9, name: "دماوند", h: 5610, prov: "مازندران", region: "البرز مرکزی، استان مازندران", desc: "بلندترین قله ایران و بلندترین آتشفشان آسیا." },
+];
+const COL = ["#B9B1A4", "#3F3123", "#55412C", "#6C5236", "#84663F", "#9C7A47", "#B38C4A", "#C79D4B", "#D7AA48", "#E2B44A"];
+const NUMC = ["#29211A", "#F3EEE3", "#F3EEE3", "#F3EEE3", "#F3EEE3", "#29211A", "#29211A", "#29211A", "#29211A", "#29211A"];
+const SALES_MIN = [0, 0, 5e7, 1e8, 2e8, 3e8, 4e8, 5e8, 1e9, 2e9];
+const SALES_TXT = ["هر میزان", "کمتر از ۵۰ میلیون", "۵۰ تا ۱۰۰ میلیون", "۱۰۰ تا ۲۰۰ میلیون", "۲۰۰ تا ۳۰۰ میلیون", "۳۰۰ تا ۴۰۰ میلیون", "۴۰۰ تا ۵۰۰ میلیون", "۵۰۰ میلیون تا ۱ میلیارد", "۱ تا ۲ میلیارد", "۲ میلیارد و بیشتر"];
+const SCORE_GT = [0, 0, 84, 86, 88, 90, 92, 94, 96, 98];
+const SCORE_TXT = (l) => l === 0 ? "دارای معوقات" : l === 1 ? "۸۴ و کمتر" : l === 9 ? "بالاتر از ۹۸" : fa(SCORE_GT[l]) + " تا " + fa(SCORE_GT[l] + 2);
+// [grade][level] in percent; level 0 = base
+const CASH = [null, [0, 14, 16, 18, 20, 24, 28, 32, 36, 40], [0, 9, 11, 13, 15, 17, 19, 21, 23, 26], [0, 4, 4, 4, 5, 5, 6, 6, 7, 7]];
+const INST = [null, [0, 8, 9, 10, 12, 14, 16, 18, 20, 21], [0, 5, 6, 7, 9, 10, 11, 12, 13, 14], [0, 3, 3, 3, 3, 4, 4, 5, 5, 6]];
+const FAQ = [
+  ["امتیاز خوش‌حسابی دقیقاً چطور حساب می‌شود؟", "مبلغ اقساطی که بین ۲۰ام هر ماه تا ۲۰ام ماه بعد سررسید شده‌اند و هنوز پرداخت نشده‌اند، بر مبلغ کل فروش ماه شمسی قبل تقسیم می‌شود. امتیاز خوش‌حسابی برابر است با ۱۰۰ منهای درصد این نسبت."],
+  ["فروشم بالاست؛ چرا پله‌ام پایین است؟", "پله شما برابر با امتیاز پایین‌تر از بین فروش و خوش‌حسابی است. اگر امتیاز خوش‌حسابی پایین باشد، فروش بالا آن را جبران نمی‌کند."],
+  ["چرا در یک ماه بیشتر از یک پله بالا نرفتم؟", "جابه‌جایی بین پله‌ها تدریجی است. هر شریک در هر ماه فقط می‌تواند یک پله بالا یا پایین برود."],
+  ["نقطه شروع چیست؟", "اگر مجموع اقساط سررسیدشده و پرداخت‌نشده شما به ۲۰۰ میلیون تومان برسد، جشنواره‌های شما متوقف می‌شود و به نقطه شروع برمی‌گردید."],
+  ["کارمزد آنی و آتی یعنی چه؟", "در فروش قسطی، بخشی از کارمزد بعد از صدور بیمه‌نامه (آنی) و بخش دیگر همراه با بازپرداخت اقساط (آتی) به حساب شما واریز می‌شود."],
+  ["رده‌بندی اولیه من چطور تعیین می‌شود؟", "رده‌بندی اولیه شرکای فعلی و شرکایی که برای اولین‌بار سفارش ثبت می‌کنند، بر اساس عملکرد اولین ماه شمسی آن‌ها محاسبه می‌شود."],
+  ["کدام فروش‌ها در محاسبه حساب می‌شوند؟", "فروش قسطی و نقدی بیمه‌های خودرویی (ثالث و بدنه) در آخرین ماه شمسی."],
+  ["شرکت‌های درجه ۱، ۲ و ۳ کدام‌اند؟", "شرکت‌های بیمه در سه درجه دسته‌بندی شده‌اند. درجه هر شرکت در پنل شرکا اعلام می‌شود."],
+];
+
+// ---------- helpers ----------
+function money(v) {
+  if (v <= 0) return "صفر";
+  if (v >= 1e9) { const b = Math.round(v / 1e8) / 10; return fa(b % 1 ? b.toFixed(1) : b) + " میلیارد"; }
+  const m = Math.round(v / 1e6);
+  return m < 1 ? "کمتر از ۱ میلیون" : fa(m) + " میلیون";
+}
+function rng(seed) {
+  let a = (seed | 0) ^ 0x9e3779b9;
+  return () => { a = (a + 0x6d2b79f5) | 0; let t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+}
+const clamp = (x) => (x < 0 ? 0 : x > 1 ? 1 : x);
+const smooth = (a, b, x) => { const t = clamp((x - a) / (b - a)); return t * t * (3 - 2 * t); };
+const ease = (t) => { const c = clamp(t); return 1 - Math.pow(1 - c, 4); };
+const shade = (hex, f) => { const n = parseInt(hex.slice(1), 16); const r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255; const m = (c) => Math.round(c * f); return `rgb(${m(r)},${m(g)},${m(b)})`; };
+
+// split headings into masked words
+$$("[data-split]").forEach((el) => {
+  const base = +el.dataset.split || 0;
+  let i = 0;
+  const walk = (node) => {
+    Array.from(node.childNodes).forEach((n) => {
+      if (n.nodeType === 3) {
+        const parts = n.textContent.split(/(\s+)/);
+        const frag = document.createDocumentFragment();
+        parts.forEach((p) => {
+          if (!p) return;
+          if (/^\s+$/.test(p)) { frag.appendChild(document.createTextNode(" ")); return; }
+          const w = document.createElement("span"); w.className = "w";
+          const wi = document.createElement("span"); wi.className = "wi"; wi.style.setProperty("--d", base + i++ * 70); wi.textContent = p;
+          w.appendChild(wi); frag.appendChild(w);
+        });
+        n.replaceWith(frag);
+      } else if (n.nodeType === 1 && !(n instanceof SVGElement)) {
+        if (n.classList.contains("acc")) { n.style.setProperty("--d", base + i * 70); }
+        walk(n);
+      }
+    });
+  };
+  walk(el);
+});
+
+// ---------- peak card ----------
+const card = $("#peakcard");
+let cardFor = null;
+function showCard(el, l) {
+  const p = PEAKS[l];
+  $(".nm", card).textContent = l === 0 ? p.name + " · پله ۰" : p.name + " · پله " + fa(l);
+  $(".ht", card).textContent = p.h ? fa(p.h.toLocaleString("en-US")) + " متر" : "";
+  $(".rg", card).textContent = p.region;
+  $(".ds", card).textContent = p.desc;
+  card.classList.add("show"); card.setAttribute("aria-hidden", "false");
+  cardFor = el;
+  place();
+}
+function place() {
+  if (!cardFor) return;
+  const r = cardFor.getBoundingClientRect();
+  const bar = cardFor.querySelector(".bar") || cardFor;
+  const br = bar.getBoundingClientRect();
+  const cw = card.offsetWidth, ch = card.offsetHeight;
+  let x = r.left + r.width / 2 - cw / 2;
+  x = Math.max(12, Math.min(innerWidth - cw - 12, x));
+  let y = (cardFor.classList.contains("col") ? br.top : r.top) - ch - 12;
+  if (y < 84 && cardFor.classList.contains("col")) {
+    y = Math.min(innerHeight - ch - 12, br.top + 24);
+    x = r.right + 12 + cw < innerWidth - 12 ? r.right + 12 : r.left - cw - 12;
+    x = Math.max(12, x);
+  } else if (y < 84) y = r.bottom + 12;
+  card.style.left = x + "px"; card.style.top = y + "px";
+}
+function hideCard() { card.classList.remove("show"); card.setAttribute("aria-hidden", "true"); cardFor = null; $$(".col.act").forEach((c) => c.classList.remove("act")); }
+addEventListener("scroll", () => { if (cardFor) place(); }, { passive: true });
+addEventListener("resize", () => { if (cardFor) place(); });
+document.addEventListener("pointerdown", (e) => { if (cardFor && !e.target.closest(".col,.chip")) hideCard(); });
+function bindCard(el, l) {
+  el.addEventListener("pointerenter", (e) => { if (e.pointerType !== "touch") showCard(el, l); });
+  el.addEventListener("pointerleave", (e) => { if (e.pointerType !== "touch") hideCard(); });
+  el.addEventListener("focus", () => showCard(el, l));
+  el.addEventListener("blur", hideCard);
+  el.addEventListener("click", (e) => {
+    if (e.pointerType === "mouse") return;
+    if (cardFor === el) { hideCard(); return; }
+    hideCard(); el.classList.add("act"); showCard(el, l);
+  });
+}
+
+// ---------- hero chart ----------
+const chart = $("#chart");
+function mtnSVG(p) {
+  const c = COL[p.l], d = shade(c, 0.78);
+  if (p.l === 0) return `<svg class="mtn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M8 100C24 100 32 30 50 30S76 100 92 100Z" fill="${c}" opacity=".6"/></svg>`;
+  const r = rng(p.l * 97 + 13);
+  const T = [0.16, 0.34, 0.54, 0.76];
+  const L = T.map((t) => [50 - 50 * t + (r() - 0.5) * 7, t * 100 + (r() - 0.5) * 6]);
+  const R = T.map((t) => [50 + 50 * t + (r() - 0.5) * 7, t * 100 + (r() - 0.5) * 6]);
+  const pt = (a) => a[0].toFixed(1) + " " + a[1].toFixed(1);
+  const out = `M0 100L${pt(L[3])}L${pt(L[2])}L${pt(L[1])}L${pt(L[0])}L47.6 2.4Q50 -0.6 52.4 2.4L${pt(R[0])}L${pt(R[1])}L${pt(R[2])}L${pt(R[3])}L100 100Z`;
+  const ridgeX = 58 + r() * 8;
+  const sh = `M52.4 2.4L${pt(R[0])}L${pt(R[1])}L${pt(R[2])}L${pt(R[3])}L100 100L${ridgeX.toFixed(1)} 100L${(53 + r() * 4).toFixed(1)} 55L${(51 + r() * 2).toFixed(1)} 24Z`;
+  let snow = "";
+  if (p.l >= 7) {
+    const s = p.l === 9 ? 30 : p.l === 8 ? 24 : 18;
+    const xl = 50 - s * 0.5, xr = 50 + s * 0.5;
+    let z = `M47.6 2.4Q50 -0.6 52.4 2.4L${xr.toFixed(1)} ${s}`;
+    for (let k = 1; k < 6; k++) { const x = xr - (xr - xl) * (k / 6); z += `L${x.toFixed(1)} ${(s + (k % 2 ? 7 : -1) + (r() - 0.5) * 3).toFixed(1)}`; }
+    z += `L${xl.toFixed(1)} ${s}Z`;
+    snow = `<path class="snowcap" d="${z}" fill="#FBF8F1"/>`;
+  }
+  const stroke = p.l === 9 ? ` stroke="#29211A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"` : "";
+  return `<svg class="mtn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="${out}" fill="${c}"/><path d="${sh}" fill="${d}" opacity=".55"/>${snow}${stroke ? `<path d="${out}" fill="none"${stroke}/>` : ""}</svg>`;
+}
+function renderChart(v, animate) {
+  chart.dataset.variant = v;
+  chart.classList.remove("go", "settled");
+  chart.innerHTML = `<div class="stage"><span class="horizon"></span><div class="cols">${PEAKS.map((p) => {
+    const bar = p.l === 0 ? 44 : 98 + (p.l - 1) * 34;
+    return `<button type="button" class="col lv${p.l}" data-l="${p.l}" aria-label="${p.name}${p.h ? "، " + fa(p.h) + " متر" : ""}" style="--r:${(bar / 420).toFixed(4)};--i:${p.l};--c:${COL[p.l]};--nc:${NUMC[p.l]};z-index:${20 - p.l}">
+      <span class="col-name">${p.l === 0 ? "نقطه<br>شروع" : p.name}</span>
+      <span class="bar">${v === "peaks" ? mtnSVG(p) : ""}${v === "bars" && p.l === 9 ? '<span class="snow"></span>' : ""}<span class="num">${fa(p.l)}</span></span>
+    </button>`;
+  }).join("")}</div></div>`;
+  $$(".col", chart).forEach((c) => bindCard(c, +c.dataset.l));
+  if (animate) {
+    void chart.offsetWidth;
+    requestAnimationFrame(() => { chart.classList.add("go"); setTimeout(() => chart.classList.add("settled"), reduced ? 0 : 260 + 9 * 85 + 1200); });
+  }
+}
+let variant = "bars";
+try { variant = localStorage.getItem("mrf-hero") || "bars"; } catch (e) {}
+if (variant !== "bars" && variant !== "peaks") variant = "bars";
+renderChart(variant, false);
+
+// hero backdrop ridges
+(function heroRidges() {
+  const svg = $(".hero-ridges");
+  const W = 1400, H = 520;
+  const fills = ["#EDE4D2", "#E7DCC6", "#E0D3BA"];
+  let html = "";
+  for (let i = 0; i < 3; i++) {
+    const r = rng(40 + i * 17);
+    const domes = Array.from({ length: 4 }, (_, k) => ({ c: -0.8 + k * 0.55 + r() * 0.3, w: 0.18 + r() * 0.16, h: 0.4 + r() * 0.6 }));
+    const base = 0.62 + i * 0.14, amp = 0.5 - i * 0.12;
+    let d = `M0 ${H}`;
+    for (let x = 0; x <= W; x += 10) {
+      const u = (x - W / 2) / 900;
+      let s = 0; for (const o of domes) { const z = Math.abs((u - o.c) / o.w); s += Math.exp(12 * o.h * Math.exp(-Math.pow(z, 1.3))); }
+      const top = Math.log(s) / 12 + 0.03 * Math.sin(u * 22 + i);
+      d += `L${x} ${(H * (base - amp * top)).toFixed(1)}`;
+    }
+    d += `L${W} ${H}Z`;
+    html += `<g data-depth="${i + 1}"><path d="${d}" fill="${fills[i]}" style="--d:${200 + i * 180}"/></g>`;
+  }
+  svg.innerHTML = html;
+})();
+
+// hero pointer: glow + ridge parallax
+(function heroPointer() {
+  const hero = $(".hero-card"), bg = $(".hero-bg");
+  const gs = $$(".hero-ridges g");
+  let tx = 0, ty = 0, px = 0, py = 0, raf = 0;
+  const tick = () => {
+    px += (tx - px) * 0.07; py += (ty - py) * 0.07;
+    bg.style.setProperty("--gx", (28 + px * 40) + "%");
+    bg.style.setProperty("--gy", (8 + py * 20) + "%");
+    gs.forEach((g) => { const d = +g.dataset.depth; g.style.transform = `translate(${(-px * d * 10).toFixed(2)}px,${(-py * d * 3).toFixed(2)}px)`; });
+    raf = Math.abs(tx - px) + Math.abs(ty - py) > 0.002 ? requestAnimationFrame(tick) : 0;
+  };
+  if (reduced) return;
+  hero.addEventListener("pointermove", (e) => {
+    const r = hero.getBoundingClientRect();
+    tx = (e.clientX - r.left) / r.width - 0.5; ty = (e.clientY - r.top) / r.height - 0.5;
+    if (!raf) raf = requestAnimationFrame(tick);
+  });
+  hero.addEventListener("pointerleave", () => { tx = 0; ty = 0; if (!raf) raf = requestAnimationFrame(tick); });
+})();
+
+// count-up
+function countUp(el) {
+  const to = +el.dataset.count, t0 = performance.now(), dur = 1300;
+  if (reduced) { el.textContent = fa(to); return; }
+  const step = (now) => { const k = ease((now - t0) / dur); el.textContent = fa(Math.round(to * k)); if (k < 1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+}
+
+// ---------- comparison switch ----------
+const seg = $("#seg");
+function placePill(group) {
+  const on = group.querySelector('[aria-pressed="true"],[aria-selected="true"]');
+  const pill = group.querySelector(".pill");
+  if (!on || !pill) return;
+  const gr = group.getBoundingClientRect(), r = on.getBoundingClientRect();
+  pill.style.width = r.width + "px";
+  pill.style.insetInlineStart = (gr.right - r.right) + "px";
+}
+function setVariant(v, user) {
+  variant = v;
+  $$("button", seg).forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === v)));
+  placePill(seg);
+  try { localStorage.setItem("mrf-hero", v); } catch (e) {}
+  if (user) {
+    const hr = $("#hero").getBoundingClientRect();
+    if (hr.bottom < 120 || hr.top > innerHeight - 120) $("#hero").scrollIntoView({ behavior: reduced ? "auto" : "smooth" });
+    hideCard();
+    renderChart(v, true);
+  }
+}
+$$("button", seg).forEach((b) => b.addEventListener("click", () => { if (b.dataset.v !== variant) setVariant(b.dataset.v, true); }));
+setVariant(variant, false);
+
+// ---------- peaks table ----------
+(function peaksTable() {
+  const t = $("#ptable");
+  let h = `<div class="prow head" role="row"><span role="columnheader">قله</span><span role="columnheader">فروش ماهانه (تومان)</span><span role="columnheader">امتیاز خوش‌حسابی</span><span role="columnheader">کارمزد نقدی تا</span><span role="columnheader">کارمزد قسطی تا</span></div>`;
+  for (let l = 9; l >= 0; l--) {
+    const p = PEAKS[l];
+    h += `<div class="prow rv" role="row" style="--d:${300 + (9 - l) * 60}">
+      <span class="peak" role="cell"><button type="button" class="chip${l ? "" : " zero"}" data-l="${l}"><span class="b">${fa(l)}</span><span>${p.name}</span></button><span class="meta">${l ? fa(p.h.toLocaleString("en-US")) + " متر · " + p.prov : "جشنواره متوقف"}</span></span>
+      <span class="v" role="cell" data-k="فروش ماهانه (تومان)">${SALES_TXT[l]}</span>
+      <span class="v" role="cell" data-k="امتیاز خوش‌حسابی">${SCORE_TXT(l)}</span>
+      <span class="p" role="cell" data-k="کارمزد نقدی تا">${l ? fa(CASH[1][l]) + "٪" : "پایه"}</span>
+      <span class="p" role="cell" data-k="کارمزد قسطی تا">${l ? fa(INST[1][l]) + "٪" : "پایه"}</span>
+    </div>`;
+  }
+  t.innerHTML = h;
+  $$(".chip").forEach((c) => bindCard(c, +c.dataset.l));
+})();
+
+// ---------- rates ----------
+let rateCol = null, rateManual = false;
+(function rates() {
+  const rt = $("#rt");
+  const lv = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+  let h = `<div class="c lbl hdr">شرکت بیمه</div>`;
+  lv.forEach((l) => { h += `<button type="button" class="c hdr" data-col="${l}" aria-label="برجسته کردن ${PEAKS[l].name}"><span class="bx">${fa(l)}</span><span class="nm">${PEAKS[l].name}</span></button>`; });
+  [1, 2, 3].forEach((g) => {
+    h += `<div class="c lbl">شرکت‌های درجه ${fa(g)}</div>`;
+    lv.forEach((l) => {
+      h += l === 0
+        ? `<div class="c" data-col="0"><span class="base">پایه</span></div>`
+        : `<div class="c" data-col="${l}"><span class="cash">${fa(CASH[g][l])}٪</span><span class="inst">قسطی ${fa(INST[g][l])}٪</span></div>`;
+    });
+  });
+  rt.innerHTML = h;
+  $$(".hdr[data-col]", rt).forEach((b) => b.addEventListener("click", () => { rateManual = true; highlight(+b.dataset.col); }));
+})();
+function highlight(l) {
+  rateCol = l;
+  $$("#rt [data-col]").forEach((c) => c.classList.toggle("hl", +c.dataset.col === l));
+}
+// tabs
+(function tabs() {
+  const list = $(".tabs");
+  const tabsEls = $$(".tab", list);
+  const select = (t) => {
+    tabsEls.forEach((x) => { const on = x === t; x.setAttribute("aria-selected", String(on)); x.tabIndex = on ? 0 : -1; $("#" + x.getAttribute("aria-controls")).hidden = !on; });
+    placePill(list);
+  };
+  tabsEls.forEach((t) => {
+    t.addEventListener("click", () => select(t));
+    t.addEventListener("keydown", (e) => {
+      const i = tabsEls.indexOf(t);
+      if (e.key === "ArrowLeft" || e.key === "ArrowRight") { e.preventDefault(); const n = tabsEls[(i + (e.key === "ArrowLeft" ? 1 : -1) + tabsEls.length) % tabsEls.length]; n.focus(); select(n); }
+    });
+  });
+  requestAnimationFrame(() => placePill(list));
+  addEventListener("resize", () => { placePill(list); placePill(seg); });
+  document.fonts && document.fonts.ready.then(() => { placePill(list); placePill(seg); });
+})();
+
+// ---------- calculator ----------
+const salesEl = $("#sales"), scoreEl = $("#score"), ladder = $("#ladder"), flag = $("#flag"), nextEl = $("#next");
+const RUNG_BG = ["", "rgba(62,49,35,.45)", "rgba(85,65,44,.4)", "rgba(108,82,54,.36)", "rgba(132,102,63,.32)", "rgba(156,122,71,.28)", "rgba(179,140,74,.26)", "rgba(199,157,75,.24)", "rgba(215,170,72,.22)", "rgba(226,180,74,.22)"];
+for (let l = 9; l >= 1; l--) {
+  const r = document.createElement("div");
+  r.className = "rung"; r.dataset.l = l; r.style.setProperty("--rb", RUNG_BG[l]);
+  r.innerHTML = `<span class="dots"><i class="dot s"></i><i class="dot q"></i></span><span class="nm">${PEAKS[l].name}</span><span class="rg"><span>${SALES_TXT[l]}</span><i>·</i><span class="sc">امتیاز ${SCORE_TXT(l)}</span></span>`;
+  ladder.appendChild(r);
+}
+const salesFromPos = (p) => { const v = 3e9 * Math.pow(p / 1000, 2); return v < 1e8 ? Math.round(v / 1e6) * 1e6 : Math.round(v / 1e7) * 1e7; };
+const salesLvl = (s) => { let l = 1; for (let k = 2; k <= 9; k++) if (s >= SALES_MIN[k]) l = k; return l; };
+const scoreLvl = (q) => { let l = 1; for (let k = 2; k <= 9; k++) if (q > SCORE_GT[k]) l = k; return l; };
+function rangeTxt(lo, hi) {
+  if (hi < 1e9 && lo >= 1e6) return "حدود " + fa(Math.round(lo / 1e6)) + " الی " + fa(Math.round(hi / 1e6)) + " میلیون تومان";
+  return "حدود " + money(lo) + " الی " + money(hi) + " تومان";
+}
+let lastPeak = -1, lastNext = "";
+function swapText(el, html) {
+  if (el.innerHTML === html) return;
+  if (reduced) { el.innerHTML = html; return; }
+  el.classList.add("fade-swap", "out");
+  setTimeout(() => { el.innerHTML = html; el.classList.remove("out"); }, 160);
+}
+function calc() {
+  const S = salesFromPos(+salesEl.value), Q = +scoreEl.value;
+  salesEl.style.setProperty("--p", (salesEl.value / 10) + "%");
+  scoreEl.style.setProperty("--p", ((Q - 84) / 16 * 100) + "%");
+  $("#salesOut").textContent = S <= 0 ? "صفر" : money(S) + " تومان";
+  $("#scoreOut").textContent = fa(Q);
+  const sl = salesLvl(S), ql = scoreLvl(Q), pk = Math.min(sl, ql);
+  $$(".rung", ladder).forEach((r) => { const l = +r.dataset.l; r.classList.toggle("cur", l === pk); r.classList.toggle("has-s", l === sl); r.classList.toggle("has-q", l === ql); });
+  const cur = ladder.querySelector(`.rung[data-l="${pk}"]`);
+  flag.style.transform = `translateY(${cur.offsetTop + 2}px)`;
+  if (pk !== lastPeak) {
+    const n = $("#pkName");
+    if (lastPeak >= 0 && !reduced) { n.classList.add("swap"); setTimeout(() => { n.textContent = PEAKS[pk].name; n.classList.remove("swap"); }, 160); }
+    else n.textContent = PEAKS[pk].name;
+    lastPeak = pk;
+    if (!rateManual) highlight(pk);
+  }
+  let html;
+  if (pk === 9) {
+    html = `<h3>شما بر بام شرکا ایستاده‌اید</h3><p class="big"><b>تا ۴۰٪</b> کارمزد نقدی و <b>تا ۲۱٪</b> کارمزد قسطی<span class="sm">بالاترین نرخ‌ها مال شماست. با همین فروش و خوش‌حسابی، دماوند را نگه دارید.</span></p>`;
+    nextEl.classList.add("top");
+  } else {
+    nextEl.classList.remove("top");
+    const nx = pk + 1, need = [];
+    if (sl < nx) need.push(`<b>${money(SALES_MIN[nx] - S)} تومان</b> فروش بیشتر`);
+    if (ql < nx) {
+      const pts = SCORE_GT[nx] + 1 - Q;
+      const owed = S > 0 ? `<span class="sm">یعنی حدود ${money(pts / 100 * S)} تومان قسط معوق کمتر</span>` : "";
+      need.push(`امتیاز خوش‌حسابی <b>بالای ${fa(SCORE_GT[nx])}</b>${owed}`);
+    }
+    const Sn = Math.max(S, SALES_MIN[nx]);
+    const lo = Sn * INST[1][nx] / 100 - S * INST[1][pk] / 100;
+    const hi = Sn * CASH[1][nx] / 100 - S * CASH[1][pk] / 100;
+    html = `<h3>چه چیزی مرا به قله بعدی (${PEAKS[nx].name}) می‌برد؟</h3><p class="big">${(need.length > 1 ? "حدود " : sl < nx ? "حدود " : "") + need.join('<span class="and">و</span>')}</p>
+      <h3>در قله بعدی، هر ماه چقدر سود بیشتر خواهم داشت؟</h3><p class="big">${rangeTxt(lo, hi)}<span class="sm">کف بازه با نرخ قسطی و سقف آن با نرخ نقدی شرکت‌های درجه ۱ و بیمه ثالث</span></p>`;
+  }
+  if (html !== lastNext) { lastNext = html; swapText(nextEl, html); }
+}
+salesEl.addEventListener("input", calc);
+scoreEl.addEventListener("input", calc);
+
+// ---------- faq ----------
+(function faq() {
+  const list = $("#faqList");
+  list.innerHTML = FAQ.map(([q, a], i) => `<div class="qa rv${i === 0 ? " open" : ""}" style="--d:${200 + i * 70}">
+    <button type="button" aria-expanded="${i === 0}" aria-controls="ans${i}" id="q${i}"><span>${q}</span>
+      <svg class="chev" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4.5 7l4.5 4.5L13.5 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="ans" id="ans${i}" role="region" aria-labelledby="q${i}" aria-hidden="${i !== 0}"><div><p>${a}</p></div></div></div>`).join("");
+  $$(".qa button", list).forEach((b) => b.addEventListener("click", () => {
+    const qa = b.parentElement, open = !qa.classList.contains("open");
+    qa.classList.toggle("open", open); b.setAttribute("aria-expanded", String(open));
+    qa.querySelector(".ans").setAttribute("aria-hidden", String(!open));
+  }));
+})();
+
+// ---------- nav ----------
+(function nav() {
+  const navEl = $(".nav"), btn = $(".nav-menu"), sheet = $("#sheet");
+  btn.addEventListener("click", () => { const o = sheet.hidden; sheet.hidden = !o; btn.setAttribute("aria-expanded", String(o)); });
+  $$("a", sheet).forEach((a) => a.addEventListener("click", () => { sheet.hidden = true; btn.setAttribute("aria-expanded", "false"); }));
+  addEventListener("scroll", () => navEl.classList.toggle("scrolled", scrollY > 10), { passive: true });
+  const links = $$(".nav-links a");
+  const io = new IntersectionObserver((es) => es.forEach((e) => {
+    if (e.isIntersecting) links.forEach((a) => a.classList.toggle("on", a.getAttribute("href") === "#" + e.target.id));
+  }), { rootMargin: "-45% 0px -50% 0px" });
+  ["how", "peaks", "calc", "rates", "faq"].forEach((id) => io.observe(document.getElementById(id)));
+})();
+
+// ---------- reveal ----------
+const revealIO = new IntersectionObserver((es) => es.forEach((e) => {
+  if (e.isIntersecting) { e.target.classList.add("in"); revealIO.unobserve(e.target); }
+}), { threshold: 0.12 });
+$$(".sec").filter((s) => s.id !== "hero").forEach((s) => revealIO.observe(s));
+function startHero() {
+  const hero = $("#hero");
+  hero.classList.add("in");
+  chart.classList.add("go");
+  setTimeout(() => chart.classList.add("settled"), reduced ? 0 : 260 + 9 * 85 + 1200);
+  setTimeout(() => $$("[data-count]").forEach(countUp), reduced ? 0 : 1000);
+}
+let heroStarted = false;
+const go = () => { if (heroStarted) return; heroStarted = true; requestAnimationFrame(() => requestAnimationFrame(startHero)); };
+(document.fonts ? document.fonts.ready : Promise.resolve()).then(go);
+setTimeout(go, 700);
+
+// ---------- mountain scene (arch) ----------
+// Ported from Meadow Rise: ridges are painted once per size into offscreen
+// canvases (slope light, grass grain, snow, aerial haze) and composited per frame.
+(function scene() {
+  const canvas = $("#scene"), arch = $("#arch"), section = $("#cta");
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+  const P = {
+    sky: [[247, 241, 227], [238, 227, 203]], haze: [233, 222, 198], glow: [255, 244, 214], ground: [58, 46, 34], ink: [41, 33, 26],
+    hills: [[[218, 208, 190], [190, 180, 163]], [[204, 186, 148], [168, 150, 112]], [[187, 157, 102], [146, 118, 72]], [[160, 128, 76], [118, 90, 52]], [[124, 96, 57], [84, 63, 37]], [[80, 61, 39], [46, 35, 23]]],
+  };
+  const WORLD = 640, MX = 30, n = P.hills.length, seed = 5;
+  const noise = (() => {
+    const rnd = rng(seed * 7919 + 17), G = 32, lat = new Float32Array(G * G);
+    for (let i = 0; i < lat.length; i++) lat[i] = rnd();
+    const out = new Float32Array(65536);
+    for (let y = 0; y < 256; y++) {
+      const gy = y / 8, y0 = Math.floor(gy), fy = gy - y0, sy = fy * fy * (3 - 2 * fy), r0 = (y0 % G) * G, r1 = ((y0 + 1) % G) * G;
+      for (let x = 0; x < 256; x++) {
+        const gx = x / 8, x0 = Math.floor(gx), fx = gx - x0, sx = fx * fx * (3 - 2 * fx), c0 = x0 % G, c1 = (x0 + 1) % G;
+        const a = lat[r0 + c0] + (lat[r0 + c1] - lat[r0 + c0]) * sx, b = lat[r1 + c0] + (lat[r1 + c1] - lat[r1 + c0]) * sx;
+        out[(y << 8) | x] = a + (b - a) * sy;
+      }
+    }
+    return out;
+  })();
+  const sample = (x, y) => {
+    const x0 = x | 0, y0 = y | 0, fx = x - x0, fy = y - y0, xa = x0 & 255, xb = (x0 + 1) & 255, ya = (y0 & 255) << 8, yb = ((y0 + 1) & 255) << 8;
+    const a = noise[ya | xa] + (noise[ya | xb] - noise[ya | xa]) * fx, b = noise[yb | xa] + (noise[yb | xb] - noise[yb | xa]) * fx;
+    return a + (b - a) * fy;
+  };
+  function spec(i) {
+    const q = i / (n - 1), r = rng(seed * 977 + i * 131 + 7);
+    let domes = [];
+    if (i === 0) domes = [{ c: -0.06, w: 0.34, h: 1, p: 1.18 }, { c: 0.6, w: 0.3, h: 0.42, p: 1.35 }, { c: -0.72, w: 0.28, h: 0.36, p: 1.35 }];
+    else {
+      const count = q > 0.85 ? 2 : 3, span = 2.3 / count, lean = i % 2 ? 1 : -1;
+      for (let k = 0; k < count; k++) {
+        const c = -1.15 + (k + 0.2 + r() * 0.6) * span;
+        domes.push({ c, w: (0.24 + r() * 0.22) * (1 + q * 0.8), h: 0.42 + r() * 0.42 + 0.14 * clamp(0.5 + c * lean * 0.6), p: 1.2 + q * 0.8 });
+      }
+    }
+    return {
+      q, domes, base: 0.5 + q * 0.44, amp: i === 0 ? 0.37 : 0.31 - q * 0.21,
+      waves: [{ f: 1.4 + r() * 1.2, p: r() * 6.28, a: 0.045 }, { f: 5 + r() * 3, p: r() * 6.28, a: 0.02 * (1 - q) + 0.006 }, { f: 13 + r() * 6, p: r() * 6.28, a: 0.009 * (1 - q) }],
+      depth: 0.18 + q * 0.3, haze: i === 0 ? 0.2 : 0.04 + 0.42 * Math.pow(1 - q, 1.6), snow: i === 0 ? 1 : i === 1 ? 0.55 : 0, snowLine: i === 0 ? 0.27 : 0.4,
+    };
+  }
+  const specs = Array.from({ length: n }, (_, i) => spec(i));
+  function crestAt(s, x, W, H) {
+    const u = (x - W / 2) / WORLD;
+    let sum = 0;
+    for (const d of s.domes) { const z = Math.abs((u - d.c) / d.w); sum += Math.exp(14 * d.h * Math.exp(-Math.pow(z, d.p))); }
+    let wave = 0; for (const o of s.waves) wave += o.a * Math.sin(u * o.f * 6.2832 + o.p);
+    return H * (s.base - s.amp * (Math.log(sum) / 14 + wave));
+  }
+  const LV = (() => { const v = [0.48, 0.74, 0.46], l = Math.hypot(...v); return v.map((c) => c / l); })();
+  const shadeFn = (m, t) => {
+    const f = Math.pow(clamp(t), 0.6), nx = m * 2.4 * (1 - f), ny = 1 - f + 0.18, nz = 0.22 + f * 1.15, l = Math.hypot(nx, ny, nz);
+    return clamp(0.12 + 0.88 * (nx * LV[0] + ny * LV[1] + nz * LV[2]) / l);
+  };
+  const STEPS = 64;
+  function paint(px, w, h, o, c0, c1) {
+    const { s, top, W, H, sp, lit, sh: shd } = o;
+    const out = new Uint32Array(px.buffer, px.byteOffset, w * h);
+    const q = sp.q, depthPx = Math.max(1, sp.depth * H), A1 = 0.26 + 0.18 * q, A2 = 0.06 + 0.16 * q, A3 = 0.05 + 0.11 * q, lane = q * 97 + 4096;
+    const detailRows = Math.max(0, Math.min(h, Math.ceil((o.detailTo - top) * s)));
+    const dn = Math.ceil(depthPx * s) + 2, hzL = new Float32Array(dn), tL = new Uint8Array(dn), darkL = new Float32Array(dn);
+    for (let j = 0; j < dn; j++) { const d = j / s, t = clamp(d / depthPx); hzL[j] = clamp(sp.haze + 0.16 * (1 - q) * Math.exp(-d / 9) + 0.2 * (1 - q) * t * t); tL[j] = Math.round(t * (STEPS - 1)); darkL[j] = 1 - 0.3 * t * t; }
+    const shadeT = new Float32Array(128 * STEPS);
+    for (let mi = 0; mi < 128; mi++) { const mm = (mi / 127) * 4 - 2; for (let k = 0; k < STEPS; k++) shadeT[mi * STEPS + k] = shadeFn(mm, k / (STEPS - 1)); }
+    const [sR, sG, sB] = shd, dR = lit[0] - sR, dG = lit[1] - sG, dB = lit[2] - sB, [hR, hG, hB] = P.haze;
+    const snowY = H * sp.snowLine;
+    for (let c = Math.max(0, c0); c < Math.min(w, c1); c++) {
+      const X = (c + 0.5) / s - MX, cy = crestAt(sp, X, W, H);
+      const m = ((crestAt(sp, X + 1 / s, W, H) - crestAt(sp, X - 1 / s, W, H)) * s) / 2;
+      const row = Math.round((Math.max(-2, Math.min(2, m)) + 2) * 31.75) * STEPS;
+      const cyRow = (cy - top) * s, start = Math.max(0, Math.floor(cyRow) - 1);
+      const pX = X * 0.05 + lane, cX = X * 0.3 + 4096;
+      for (let r = start; r < h; r++) {
+        const dd = r + 0.5 - cyRow, cov = dd + 0.5;
+        if (cov <= 0) continue;
+        const j = dd < 0 ? 0 : dd >= dn ? dn - 1 : dd | 0;
+        const shv = shadeT[row + tL[j]] * darkL[j];
+        let R = sR + dR * shv, G = sG + dG * shv, B = sB + dB * shv;
+        if (r < detailRows) {
+          const d = dd / s, Y = top + (r + 0.5) / s;
+          const patch = sample(pX, d * 0.09 + Y * 0.02 + lane) - 0.5, clump = sample(cX, d * 1.25 + lane) - 0.5;
+          let g = Math.imul(c + 7919, 374761393) ^ Math.imul(r + 104729, 668265263); g = Math.imul(g ^ (g >>> 13), 1274126177);
+          const grain = ((g ^ (g >>> 16)) >>> 0) / 4294967296 - 0.5;
+          const tex = 1 + patch * A1 + clump * A2 + grain * A3;
+          R *= tex; G *= tex; B *= tex;
+          if (sp.snow > 0) {
+            const nz = sample(X * 0.09 + 900, Y * 0.12 + 300) - 0.5;
+            const sn = sp.snow * smooth(-0.015, 0.045, (snowY - Y) / H + nz * 0.1 - (d / H) * 0.12);
+            if (sn > 0) {
+              const k = 0.72 + 0.28 * shv;
+              R += (251 * k - R) * sn; G += (248 * k - G) * sn; B += (241 * k - B) * sn;
+            }
+          }
+        }
+        const hz = hzL[j];
+        R += (hR - R) * hz; G += (hG - G) * hz; B += (hB - B) * hz;
+        const A = cov >= 1 ? 255 : (cov * 255) | 0;
+        out[r * w + c] = ((A << 24) | ((B > 255 ? 255 : B < 0 ? 0 : B | 0) << 16) | ((G > 255 ? 255 : G < 0 ? 0 : G | 0) << 8) | (R > 255 ? 255 : R < 0 ? 0 : R | 0)) >>> 0;
+      }
+    }
+  }
+  function mistBand(w, h) {
+    const out = new Float32Array(w * h);
+    for (let y = 0; y < h; y++) {
+      const v = (y + 0.5) / h, bell = Math.exp(-Math.pow((v - 0.55) / 0.22, 2));
+      for (let x = 0; x < w; x++) {
+        const nx = (x * 256) / w;
+        const a = noise[((((y * 96) / h) | 0) << 8) | (nx | 0)], b = noise[(((((y * 40) / h) | 0) + 128) << 8) | (((nx * 2) | 0) & 255)];
+        out[y * w + x] = clamp((a * 0.65 + b * 0.35 - 0.36) * 2.6) * bell;
+      }
+    }
+    return out;
+  }
+  const css = (c, a) => `rgba(${c[0]},${c[1]},${c[2]},${a})`;
+  let W = 1, H = 1, cs = 1, layers = [], building = n, job = null, mistC = null, sig = "";
+  let tx = 0, ty = 0, px = 0, py = 0, k = 1, kT = 1, visible = false, seenAt = null, revealAt = null, raf = 0, last = 0;
+  function measure() {
+    W = Math.max(1, canvas.clientWidth); H = Math.max(1, canvas.clientHeight);
+    cs = Math.min(devicePixelRatio || 1, 2);
+    const cw = Math.round(W * cs), ch = Math.round(H * cs);
+    if (canvas.width !== cw || canvas.height !== ch) { canvas.width = cw; canvas.height = ch; }
+    const s2 = W + "x" + H;
+    if (s2 !== sig) { const first = !sig; sig = s2; const goB = () => { building = 0; job = null; makeMist(); wake(); }; if (first) goB(); else setTimeout(goB, 140); }
+  }
+  function startJob(i) {
+    const sp = specs[i];
+    let minC = Infinity; for (let x = -MX; x <= W + MX; x += 3) minC = Math.min(minC, crestAt(sp, x, W, H));
+    const top = Math.floor(minC - 4), s = Math.min(devicePixelRatio || 1, 1.5);
+    const w = Math.ceil((W + MX * 2) * s), h = Math.ceil((H - top) * s);
+    if (h <= 0) return null;
+    const c = document.createElement("canvas"); c.width = w; c.height = h;
+    const g = c.getContext("2d");
+    let detailTo = H;
+    if (i + 1 < n) { let maxC = -Infinity; for (let x = -MX; x <= W + MX; x += 3) maxC = Math.max(maxC, crestAt(specs[i + 1], x, W, H)); detailTo = Math.min(H, maxC + 50); }
+    return { i, c, g, img: g.createImageData(w, h), o: { s, top, W, H, sp, lit: P.hills[i][0], sh: P.hills[i][1], detailTo }, w, h, col: 0 };
+  }
+  function work(budget) {
+    const t0 = performance.now();
+    while (building < n && performance.now() - t0 < budget) {
+      if (!job) job = startJob(building);
+      if (!job) { building++; continue; }
+      const nx = Math.min(job.w, job.col + 40);
+      paint(job.img.data, job.w, job.h, job.o, job.col, nx);
+      job.col = nx;
+      if (job.col >= job.w) { job.g.putImageData(job.img, 0, 0); layers[job.i] = { c: job.c, top: job.o.top, w: job.w / job.o.s, h: job.h / job.o.s }; job = null; building++; }
+    }
+  }
+  const progress = () => (building >= n ? 1 : (building + (job ? job.col / job.w : 0)) / n);
+  function makeMist() {
+    const w = 256, h = 56, a = mistBand(w, h), c = document.createElement("canvas"); c.width = w; c.height = h;
+    const g = c.getContext("2d"), img = g.createImageData(w, h);
+    for (let i = 0; i < a.length; i++) { img.data[i * 4] = P.haze[0]; img.data[i * 4 + 1] = P.haze[1]; img.data[i * 4 + 2] = P.haze[2]; img.data[i * 4 + 3] = a[i] * 255; }
+    g.putImageData(img, 0, 0); mistC = c;
+  }
+  function draw(now) {
+    const dt = revealAt === null ? -1 : now - revealAt;
+    ctx.setTransform(cs, 0, 0, cs, 0, 0);
+    const sky = ctx.createLinearGradient(0, 0, 0, H * 0.75);
+    sky.addColorStop(0, css(P.sky[0], 1)); sky.addColorStop(1, css(P.sky[1], 1));
+    ctx.fillStyle = sky; ctx.fillRect(0, 0, W, H);
+    const ox = W * (0.32 + px * 0.35), oy = H * 0.16 + py * H * 0.08;
+    const dawn = dt < 0 ? 0 : smooth(0, 1600, dt);
+    const R = Math.max(W, H) * 0.7, glow = ctx.createRadialGradient(ox, oy, 0, ox, oy, R);
+    glow.addColorStop(0, css(P.glow, 0.9 * dawn)); glow.addColorStop(0.35, css(P.glow, 0.34 * dawn)); glow.addColorStop(1, css(P.glow, 0));
+    ctx.fillStyle = glow; ctx.fillRect(0, 0, W, H);
+    if (dt < 1400 && (dt >= 0 || seenAt !== null)) {
+      const p = dt >= 0 ? 1 : Math.min(progress(), ease((now - (seenAt || now)) / 900));
+      const lw = ease(p) * W * 0.78, la = (1 - (dt < 0 ? 0 : smooth(150, 1100, dt))) * 0.4;
+      if (la > 0 && lw > 0.5) {
+        const y = Math.round(H * specs[0].base), lg = ctx.createLinearGradient(W / 2 - lw / 2, 0, W / 2 + lw / 2, 0);
+        lg.addColorStop(0, css(P.ink, 0)); lg.addColorStop(0.5, css(P.ink, la)); lg.addColorStop(1, css(P.ink, 0));
+        ctx.fillStyle = lg; ctx.fillRect(W / 2 - lw / 2, y, lw, 1);
+      }
+    }
+    const par = reduced ? 0 : 1 - k;
+    for (let i = 0; i < (dt < 0 ? 0 : n); i++) {
+      const L = layers[i]; if (!L) continue;
+      const e = dt < 0 ? 0 : ease((dt - 150 - i * 130) / 1700);
+      const rise = (1 - e) * H * (0.22 + 0.07 * i), sy = par * (8 + i * 18), lx = -px * (2 + i * 6), ly = -py * (1 + i * 2);
+      ctx.drawImage(L.c, -MX + lx, L.top + rise + sy + ly, L.w, L.h);
+      if (mistC && (i === 1 || i === 3) && i + 1 < n) {
+        const bw = W * 1.7, bh = H * (i === 1 ? 0.24 : 0.18), speed = i === 1 ? 7 : 11;
+        const off = reduced ? 0 : ((now * speed) / 1000) % bw;
+        const y = H * specs[i + 1].base - H * specs[i + 1].amp * 0.6 - bh * 0.5 + rise * 0.6 + sy;
+        ctx.globalAlpha = 0.55 * (i === 1 ? 0.9 : 0.65) * (dt < 0 ? 0 : smooth(900, 2600, dt));
+        ctx.drawImage(mistC, -off + lx * 1.4, y, bw, bh); ctx.drawImage(mistC, bw - off + lx * 1.4, y, bw, bh);
+        ctx.globalAlpha = 1;
+      }
+    }
+    ctx.globalCompositeOperation = "soft-light";
+    const pool = ctx.createRadialGradient(ox, H * 0.72, 0, ox, H * 0.72, W * 0.6);
+    pool.addColorStop(0, css(P.glow, 0.45 * dawn)); pool.addColorStop(1, css(P.glow, 0));
+    ctx.fillStyle = pool; ctx.fillRect(0, 0, W, H);
+    ctx.globalCompositeOperation = "source-over";
+    const fog = dt < 0 ? 1 : 1 - smooth(100, 2100, dt);
+    if (fog > 0) { const f = ctx.createLinearGradient(0, 0, 0, H); f.addColorStop(0, css(P.sky[0], fog)); f.addColorStop(1, css(P.sky[1], fog)); ctx.fillStyle = f; ctx.fillRect(0, 0, W, H); }
+    const gg = ctx.createLinearGradient(0, H * 0.84, 0, H);
+    gg.addColorStop(0, css(P.ground, 0)); gg.addColorStop(1, css(P.ground, 0.55));
+    ctx.fillStyle = gg; ctx.fillRect(0, H * 0.84, W, H * 0.16 + 1);
+  }
+  function tick(now) {
+    raf = 0;
+    const busy = building < n;
+    if (busy) work(revealAt === null ? 12 : visible ? 8 : 6);
+    if (revealAt === null && seenAt !== null && !busy && (reduced || now - seenAt > 500)) revealAt = reduced ? -1e9 : now;
+    if (!visible) { if (busy) raf = requestAnimationFrame(tick); return; }
+    if (!reduced) { const r = arch.getBoundingClientRect(); kT = clamp((innerHeight - r.top) / Math.max(1, Math.min(innerHeight, r.height + innerHeight * 0.4))); } else kT = 1;
+    px += ((reduced ? 0 : tx) - px) * 0.06; py += ((reduced ? 0 : ty) - py) * 0.06; k += (kT - k) * 0.1;
+    const easing = Math.abs(tx - px) > 0.001 || Math.abs(ty - py) > 0.001 || Math.abs(kT - k) > 0.001;
+    const intro = (revealAt === null && seenAt !== null) || (revealAt !== null && now - revealAt < 3000);
+    const ambient = !reduced;
+    if (busy || intro || easing || now - last > 33) { draw(now); last = now; }
+    if (busy || intro || easing || ambient) raf = requestAnimationFrame(tick);
+  }
+  function wake() { if (!raf && (visible || building < n)) raf = requestAnimationFrame(tick); }
+  section.addEventListener("pointermove", (e) => { const r = arch.getBoundingClientRect(); tx = Math.max(-0.5, Math.min(0.5, (e.clientX - r.left) / r.width - 0.5)); ty = Math.max(-0.5, Math.min(0.5, (e.clientY - r.top) / r.height - 0.5)); wake(); });
+  section.addEventListener("pointerleave", () => { tx = 0; ty = 0; wake(); });
+  addEventListener("scroll", wake, { passive: true });
+  new ResizeObserver(() => { measure(); draw(performance.now()); wake(); }).observe(arch);
+  new IntersectionObserver((es) => { const e = es[0]; visible = e.isIntersecting; if (e.isIntersecting && e.intersectionRatio >= 0.15 && seenAt === null) seenAt = performance.now(); if (visible) wake(); }, { threshold: [0, 0.15, 0.4] }).observe(arch);
+  measure(); draw(performance.now()); wake();
+})();
+
+// ---------- footer ridges + botany ----------
+(function footer() {
+  const svg = $("#footRidges"), W = 1440, H = 240;
+  const fills = ["#D9CDB4", "#A78F6C", "#5E4B37", "#221B15"];
+  let h = "";
+  for (let i = 0; i < 4; i++) {
+    const r = rng(70 + i * 29);
+    const domes = Array.from({ length: 5 }, (_, k) => ({ c: -0.9 + k * 0.45 + r() * 0.25, w: 0.12 + r() * 0.14 + i * 0.03, h: 0.35 + r() * 0.65, p: 1.25 + i * 0.25 }));
+    if (i === 0) domes.push({ c: 0.05, w: 0.16, h: 0.92, p: 1.15 });
+    const base = 0.56 + i * 0.15, amp = 0.46 - i * 0.09;
+    let d = `M0 ${H + 2}`;
+    for (let x = 0; x <= W; x += 8) {
+      const u = (x - W / 2) / 900;
+      let s = 0; for (const o of domes) { const z = Math.abs((u - o.c) / o.w); s += Math.exp(12 * o.h * Math.exp(-Math.pow(z, o.p))); }
+      const y = H * (base - amp * (Math.log(s) / 12 + 0.025 * Math.sin(u * 19 + i * 2)));
+      d += `L${x} ${Math.max(4, y).toFixed(1)}`;
+    }
+    d += `L${W} ${H + 2}Z`;
+    let snow = "";
+    h += `<g style="--dy:${30 + i * 26}px"><path d="${d}" fill="${fills[i]}"/>${snow}</g>`;
+  }
+  svg.innerHTML = h;
+  const foot = $("#foot");
+  let raf = 0;
+  const upd = () => {
+    raf = 0;
+    const r = foot.getBoundingClientRect();
+    const k = reduced ? 1 : clamp((innerHeight - r.top) / Math.max(1, Math.min(innerHeight, r.height)));
+    foot.style.setProperty("--k", k.toFixed(3));
+  };
+  addEventListener("scroll", () => { if (!raf) raf = requestAnimationFrame(upd); }, { passive: true });
+  upd();
+  // wildflower line drawings
+  const f1 = (v) => (Math.round(v * 10) / 10).toString();
+  const rnd = rng(3 * 31 + 5), B = 420, count = 9;
+  let out = "";
+  for (let kk = 0; kk < count; kk++) {
+    const x = 70 + (kk + 0.2 + rnd() * 0.6) * (1060 / count), hgt = 150 + rnd() * 230, lean = (rnd() - 0.5) * 110;
+    const ax = x, ay = B, bx = x + lean, by = B - hgt, cx = x + lean * 0.1 + (rnd() - 0.5) * 40, cy = B - hgt * 0.55;
+    const at = (t) => [(1 - t) * (1 - t) * ax + 2 * (1 - t) * t * cx + t * t * bx, (1 - t) * (1 - t) * ay + 2 * (1 - t) * t * cy + t * t * by];
+    const tan = (t) => { const dx = 2 * (1 - t) * (cx - ax) + 2 * t * (bx - cx), dy = 2 * (1 - t) * (cy - ay) + 2 * t * (by - cy), l = Math.hypot(dx, dy) || 1; return [dx / l, dy / l]; };
+    const parts = [];
+    const leaves = 2 + Math.floor(rnd() * 3);
+    for (let j = 0; j < leaves; j++) {
+      const t = 0.14 + j * (0.55 / leaves) + rnd() * 0.05, [px, py] = at(t), [tx, ty] = tan(t), ang = 0.75 * (j % 2 ? 1 : -1);
+      const dx = tx * Math.cos(ang) - ty * Math.sin(ang), dy = tx * Math.sin(ang) + ty * Math.cos(ang), len = 26 + rnd() * 30;
+      const ex = px + dx * len, ey = py + dy * len, nx = -dy * len * 0.28, ny = dx * len * 0.28, mx = (px + ex) / 2, my = (py + ey) / 2;
+      parts.push("M" + f1(px) + " " + f1(py) + "Q" + f1(mx + nx) + " " + f1(my + ny) + " " + f1(ex) + " " + f1(ey) + "Q" + f1(mx - nx) + " " + f1(my - ny) + " " + f1(px) + " " + f1(py));
+    }
+    const kind = Math.floor(rnd() * 3);
+    if (kind === 0) {
+      const r = 15 + rnd() * 9, rot = rnd() * 6.28;
+      for (let p = 0; p < 6; p++) {
+        const a = rot + (p / 6) * 6.2832, ux = Math.cos(a), uy = Math.sin(a), sx = bx + ux * r * 0.22, sy = by + uy * r * 0.22, ex = bx + ux * r, ey = by + uy * r, w = r * 0.42;
+        parts.push("M" + f1(sx) + " " + f1(sy) + "C" + f1(sx + ux * r * 0.3 - uy * w) + " " + f1(sy + uy * r * 0.3 + ux * w) + " " + f1(ex - uy * w * 0.6) + " " + f1(ey + ux * w * 0.6) + " " + f1(ex) + " " + f1(ey) + "C" + f1(ex + uy * w * 0.6) + " " + f1(ey - ux * w * 0.6) + " " + f1(sx + ux * r * 0.3 + uy * w) + " " + f1(sy + uy * r * 0.3 - ux * w) + " " + f1(sx) + " " + f1(sy));
+      }
+    } else if (kind === 1) {
+      const r = 16 + rnd() * 8; let d = "";
+      for (let p = 0; p < 16; p++) { const a = (p / 16) * 6.2832 + rnd() * 0.15, ux = Math.cos(a), uy = Math.sin(a), ex = bx + ux * r, ey = by + uy * r; d += "M" + f1(bx + ux * 2) + " " + f1(by + uy * 2) + "L" + f1(ex) + " " + f1(ey); }
+      parts.push(d);
+    } else {
+      const [tx, ty] = tan(1);
+      for (let p = 0; p < 6; p++) {
+        const px = bx - tx * p * 7, py = by - ty * p * 7;
+        for (const side of [-1, 1]) {
+          const ang = 0.5 * side, dx = tx * Math.cos(ang) - ty * Math.sin(ang), dy = tx * Math.sin(ang) + ty * Math.cos(ang), len = 10 - p * 0.6;
+          parts.push("M" + f1(px) + " " + f1(py) + "Q" + f1(px + dx * len * 0.5 - dy * 2.5 * side) + " " + f1(py + dy * len * 0.5 + dx * 2.5 * side) + " " + f1(px + dx * len) + " " + f1(py + dy * len));
+        }
+      }
+    }
+    const order = kk / (count - 1);
+    out += `<g class="stem" style="transform-origin:${f1(ax)}px 420px;--sd:${(kk * 1.7).toFixed(1)}"><path class="draw" pathLength="1" style="--d:${Math.round(600 + order * 900)}" d="M${f1(ax)} ${f1(ay)}Q${f1(cx)} ${f1(cy)} ${f1(bx)} ${f1(by)}"/>${parts.map((d, j) => `<path class="draw" pathLength="1" style="--d:${Math.round(1300 + order * 900 + j * 90)}" d="${d}"/>`).join("")}</g>`;
+  }
+  $("#botany").innerHTML = out;
+})();
+
+calc();
+})();
+</script>
+</body>
+</html>
