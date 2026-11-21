@@ -663,7 +663,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(-
     <div class="rates-head">
       <div class="ttl">
         <h2 class="h2" id="rates-title" data-split="0">جزئیات کارمزد قله</h2>
-        <p class="lead rv" style="--d:250">کارمزد قله فعلی شما، کنار قله‌های قبلی و بعدی و پایین‌ترین و بالاترین قله، برای سه گروه شرکت‌های بیمه.</p>
+        <p class="lead rv" style="--d:250">کارمزد قله فعلی شما، کنار قله قبلی، قله بعدی و بالاترین قله، برای سه گروه شرکت‌های بیمه.</p>
       </div>
       <div class="tabs rv" style="--d:300" role="tablist" aria-label="نوع بیمه">
         <span class="pill" aria-hidden="true"></span>
@@ -990,7 +990,7 @@ function placePill(group) {
 
 // ---------- rates: my peak in context ----------
 const rt = $("#rt");
-const TAG = { cur: "قله فعلی شما", prev: "قله قبلی", next: "قله بعدی", best: "بالاترین قله", worst: "پایین‌ترین قله" };
+const TAG = { cur: "قله فعلی شما", prev: "قله قبلی", next: "قله بعدی", best: "بالاترین قله" };
 let ratesFor = -1;
 function renderRates(pk) {
   if (pk === ratesFor) return;
@@ -998,7 +998,7 @@ function renderRates(pk) {
   ratesFor = pk;
   const m = new Map();
   const add = (l, t) => { if (!m.has(l)) m.set(l, []); m.get(l).push(t); };
-  add(pk, "cur"); add(pk - 1, "prev"); if (pk < 9) add(pk + 1, "next"); add(9, "best"); add(1, "worst");
+  add(pk, "cur"); add(pk - 1, "prev"); if (pk < 9) add(pk + 1, "next"); add(9, "best");
   const cols = [...m.entries()].sort((a, b) => a[0] - b[0]);
   let h = `<div class="c lbl hdr">شرکت بیمه</div>`;
   cols.forEach(([l, t]) => {
